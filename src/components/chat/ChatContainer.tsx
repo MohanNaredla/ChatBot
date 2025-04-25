@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Message } from '@/types/chat';
 import MessageList from './MessageList';
@@ -13,18 +12,36 @@ const ChatContainer: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [hasInitialMessageSent, setHasInitialMessageSent] = useState(false);
 
   const toggleChat = () => {
     setIsOpen(prev => !prev);
   };
 
+  const sendWelcomeMessage = async () => {
+    const welcomeMessageId = `msg_${Date.now()}`;
+    const welcomeMessage: Message = {
+      id: welcomeMessageId,
+      text: "Hello! I'm your AI assistant. How can I help you today? Feel free to ask me anything.",
+      sender: 'bot',
+      timestamp: new Date(),
+    };
+
+    setMessages([welcomeMessage]);
+    setHasInitialMessageSent(true);
+  };
+
+  useEffect(() => {
+    if (isOpen && !hasInitialMessageSent) {
+      sendWelcomeMessage();
+    }
+  }, [isOpen, hasInitialMessageSent]);
+
   const sendMessage = async (text: string) => {
     if (!text.trim()) return;
     
-    // Generate a unique ID for the message
     const userMessageId = `msg_${Date.now()}`;
     
-    // Add user message to the chat
     const userMessage: Message = {
       id: userMessageId,
       text,
@@ -37,17 +54,14 @@ const ChatContainer: React.FC = () => {
     setError(null);
     
     try {
-      // Mock API call - replace with real API in production
       let botResponse;
       try {
         botResponse = await sendChatMessage(text);
       } catch (error) {
-        // Use mock response for demo purposes
         await new Promise(resolve => setTimeout(resolve, 1000));
         botResponse = "I'm a demo bot. In production, I would connect to a real API. How can I help you today?";
       }
       
-      // Add bot response to the chat
       const botMessage: Message = {
         id: `msg_${Date.now() + 1}`,
         text: botResponse,
@@ -69,7 +83,6 @@ const ChatContainer: React.FC = () => {
     }
   };
 
-  // Handle the escape key to close the chat
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
