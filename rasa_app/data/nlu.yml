@@ -1,0 +1,111 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+      - hey
+      - hello there
+      - hi there
+      - hey there
+      - good morning
+      - good afternoon
+      - good evening
+      - greetings
+      - hey!
+      - hi, how are you?
+      - hello, bot
+      - hi assistant
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - bye bye
+      - see you later
+      - see you around
+      - talk to you later
+      - see you soon
+      - take care
+      - farewell
+      - have a good day
+      - catch you later
+
+  - intent: thank
+    examples: |
+      - thanks
+      - thank you
+      - thank you so much
+      - thanks a lot
+      - thank you very much
+      - thanks for your help
+      - thank you for the information
+      - appreciate it
+      - thanks, that was helpful
+      - cheers
+      - much appreciated
+
+  - intent: help
+    examples: |
+      - help
+      - I need help
+      - can you help me?
+      - I need some assistance
+      - could you assist me?
+      - help me please
+      - I need help with something
+      - can you help?
+      - please help
+
+  - intent: get_info
+    examples: |
+      - What is the Attendance Improvement Plan?
+      - What does AIP stand for?
+      - How does the AIP system work?
+      - How do I register for the AIP system?
+      - How can I create an AIP account?
+      - How can I sign up for AIP?
+      - How do I log in to the AIP portal?
+      - Where do I log in for AIP?
+      - I forgot my AIP password, how can I reset it?
+      - How can I change my password on the AIP system?
+      - How do I view attendance reports?
+      - Where can I find attendance reports in AIP?
+      - How do I generate an attendance report?
+      - What are the different tiers in an attendance plan?
+      - What is a Tier 1 attendance plan?
+      - What is a Tier 2 plan?
+      - What is a Tier 3 plan?
+      - What is a Tier 4 intervention?
+      - Could you explain the tiers of the attendance plan?
+      - What is the deadline for submitting an AIP?
+      - When do I need to submit the attendance improvement plan?
+      - What are the deadlines for AIP submissions?
+      - Who is responsible for tracking attendance in AIP?
+      - What are the responsibilities of a teacher in the AIP process?
+      - What does a principal do in the AIP?
+      - What can a district administrator do in AIP?
+      - What are the roles in the AIP system?
+      - What permissions do school administrators have in AIP?
+      - How do Tier 2 interventions differ from Tier 1?
+      - Explain the role comparison for AIP roles.
+      - Where can I find the AIP user manual?
+      - Is there a guide for using the AIP system?
+      - How often are attendance reports updated in AIP?
+      - How can I improve attendance using AIP?
+      - Tell me about the attendance improvement plan.
+      - Give me an overview of the AIP process.
+
+  - intent: out_of_scope
+    examples: |
+      - What's the weather like today?
+      - Tell me a joke.
+      - Who won the football game last night?
+      - Can you book a flight for me?
+      - I want to order a pizza.
+      - Play some music.
+      - How do I cook pasta?
+      - What is the capital of France?
+      - Can you solve math problems?
+      - Do you know any good movies?

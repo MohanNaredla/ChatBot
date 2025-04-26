@@ -1,0 +1,32 @@
+version: "3.1"
+intents:
+  - greet
+  - goodbye
+  - thank
+  - help
+  - get_info
+  - out_of_scope
+
+responses:
+  utter_greet:
+    - text: "Hello! I am the Attendance Improvement Plan assistant. How can I help you today?"
+    - text: "Hi there! I'm here to answer questions about the Attendance Improvement Plan (AIP). What would you like to know?"
+
+  utter_goodbye:
+    - text: "Goodbye! Feel free to reach out if you have any more questions."
+    - text: "Bye for now. I'm here if you need more help with AIP."
+
+  utter_thank:
+    - text: "You're welcome!"
+    - text: "Happy to help!"
+
+  utter_help:
+    - text: "I can assist you with the Attendance Improvement Plan system. You can ask about registration, logging in, reports, plan tiers, deadlines, role responsibilities, and more. What would you like to know?"
+    - text: "Sure! I can help with AIP questions (registration, login, reports, plan details, deadlines, roles, etc.). What information do you need?"
+
+  utter_out_of_scope:
+    - text: "I'm sorry, I can only assist with questions related to the Attendance Improvement Plan system."
+    - text: "My apologies, but I can only help with Attendance Improvement Plan (AIP) related questions at this time."
+
+actions:
+  - action_get_info

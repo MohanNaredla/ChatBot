@@ -1,0 +1,77 @@
+version: "3.1"
+
+stories:
+  - story: greet and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: greet and ask question
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: get_info
+      - action: action_get_info
+      - intent: thank
+      - action: utter_thank
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: multiple questions with greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: get_info
+      - action: action_get_info
+      - intent: get_info
+      - action: action_get_info
+      - intent: thank
+      - action: utter_thank
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask question without greeting
+    steps:
+      - intent: get_info
+      - action: action_get_info
+      - intent: get_info
+      - action: action_get_info
+      - intent: thank
+      - action: utter_thank
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: help then question
+    steps:
+      - intent: help
+      - action: utter_help
+      - intent: get_info
+      - action: action_get_info
+      - intent: thank
+      - action: utter_thank
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: greet and help
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: help
+      - action: utter_help
+      - intent: get_info
+      - action: action_get_info
+      - intent: thank
+      - action: utter_thank
+
+  - story: follow up after thanks
+    steps:
+      - intent: get_info
+      - action: action_get_info
+      - intent: thank
+      - action: utter_thank
+      - intent: get_info
+      - action: action_get_info
+      - intent: goodbye
+      - action: utter_goodbye

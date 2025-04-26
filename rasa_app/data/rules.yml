@@ -1,0 +1,37 @@
+version: "3.1"
+
+rules:
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Respond to thanks
+    steps:
+      - intent: thank
+      - action: utter_thank
+
+  - rule: Provide help information
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - rule: Answer AIP question
+    steps:
+      - intent: get_info
+      - action: action_get_info
+
+  - rule: Handle out-of-scope or fallback
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+
+  - rule: NLU fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_out_of_scope

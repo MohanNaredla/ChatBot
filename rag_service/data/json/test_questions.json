@@ -1,0 +1,110 @@
+[
+  {
+    "question": "What is the purpose of the Attendance Improvement Plan (AIP) system?",
+    "expected_answer": "The Attendance Improvement Plan (AIP) is an online system that helps New Mexico schools create student attendance improvement plans and action plans to improve attendance. It allows schools to track attendance trends across schools, plan evidence\u2011based strategies to improve attendance, and monitor progress through reporting periods (80\u2011day, 120\u2011day, end\u2011of\u2011year).",
+    "keywords": [
+      "AIP",
+      "attendance plan",
+      "evidence\u2011based strategies",
+      "monitor progress"
+    ]
+  },
+  {
+    "question": "What information does a user need to provide when registering a new account in the AIP system?",
+    "expected_answer": "To register a new account, the user must click \"Register New Account\" and fill out their first name and last name, their school or district email (personal email domains are not allowed), select their school/district name from a dropdown, provide a phone number, and set a password that meets the requirements.",
+    "keywords": [
+      "register",
+      "school email",
+      "dropdown",
+      "phone number",
+      "password"
+    ]
+  },
+  {
+    "question": "What are the password requirements for a new AIP account?",
+    "expected_answer": "A password must be at least 12 characters long, include at least one uppercase letter, one number, and one special character (e.g. !, @, #), and it expires every 60 days.",
+    "keywords": ["12 characters", "uppercase", "special character", "60 days"]
+  },
+  {
+    "question": "Which user role has the ability to approve or reject new user registration requests in the AIP system?",
+    "expected_answer": "Only the PED Absence Coordinator role can approve or reject new user account requests.",
+    "keywords": [
+      "approve registrations",
+      "Absence Coordinator",
+      "user requests"
+    ]
+  },
+  {
+    "question": "What should a user do the first time they log in if they have multiple roles (e.g., both School and District Coordinator)?",
+    "expected_answer": "During first\u2011time setup, if the user has multiple roles, they will land on a role selection page where they must choose which role to proceed with. After selecting a role, the home screen displays the certified schools or districts for that role and shows any announcements.",
+    "keywords": [
+      "first\u2011time setup",
+      "multiple roles",
+      "landing page",
+      "announcements"
+    ]
+  },
+  {
+    "question": "What can a PED Viewer do in the AIP system?",
+    "expected_answer": "A PED Viewer has read\u2011only access: they can view attendance improvement plans for schools and districts, view announcements created by a PED Absence Coordinator, and view attendance reports to monitor trends; they cannot edit plans or manage users.",
+    "keywords": [
+      "PED Viewer",
+      "read\u2011only",
+      "view plans",
+      "view announcements",
+      "view reports"
+    ]
+  },
+  {
+    "question": "What is the purpose of the Approve/Reject User function for the PED Absence Coordinator?",
+    "expected_answer": "The Approve/Reject User function allows the PED Absence Coordinator to manage system access by granting permissions only to authorized personnel and ensuring each user's role aligns with their responsibilities, maintaining data security and accountability.",
+    "keywords": [
+      "Approve/Reject Users",
+      "data security",
+      "authorized personnel",
+      "accountability"
+    ]
+  },
+  {
+    "question": "What kinds of actions can the PED Absence Coordinator perform in the Manage Users section?",
+    "expected_answer": "In the Manage Users section, a PED Absence Coordinator can update user contact details, assign or modify roles, deactivate accounts, reset passwords, and correct profile errors such as typos, ensuring user permissions remain accurate and aligned with policies.",
+    "keywords": [
+      "Manage Users",
+      "update contact info",
+      "assign roles",
+      "reset password",
+      "deactivate account"
+    ]
+  },
+  {
+    "question": "What reports are available to a PED Absence Coordinator, and how do they help manage the attendance improvement process?",
+    "expected_answer": "A PED Absence Coordinator can access the Contact Information Report to verify personnel details, the Attendance Plan Submission Report to track which schools or districts have submitted required plans, and the Missing Strategy Information Report to identify schools lacking tiered intervention plans; these reports help monitor compliance and guide interventions.",
+    "keywords": [
+      "reports",
+      "Contact Information",
+      "Attendance Plan Submission",
+      "Missing Strategy Information",
+      "compliance"
+    ]
+  },
+  {
+    "question": "What tasks can an IT Administrator perform in the IT Panel of the AIP system?",
+    "expected_answer": "In the IT Panel, an IT Administrator can create or edit school years, define reporting periods, refresh STARS snapshots to synchronize data, update school year statuses, and set maintenance notification messages.",
+    "keywords": [
+      "IT Panel",
+      "school year setup",
+      "reporting periods",
+      "STARS sync",
+      "maintenance messages"
+    ]
+  },
+  {
+    "question": "How does the PED Absence Coordinator promote best practices across different schools or districts?",
+    "expected_answer": "The PED Absence Coordinator promotes best practices by sharing successful intervention strategies between schools and districts.",
+    "keywords": [
+      "best practices",
+      "share interventions",
+      "successful strategies"
+    ]
+  }
+]
