@@ -1,3 +1,4 @@
+# rag_service/service.py
 import os
 import pickle
 import numpy as np
@@ -5,6 +6,7 @@ from dotenv import load_dotenv #type:ignore
 
 import torch #type:ignore
 from fastapi import FastAPI #type:ignore
+from fastapi.middleware.cors import CORSMiddleware #type:ignore
 import uvicorn #type:ignore
 from pydantic import BaseModel #type:ignore
 from huggingface_hub import login #type:ignore
@@ -65,6 +67,14 @@ def generate_answer(query: str):
     return tokenizer.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True).strip()
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/chat")
 def chat(req: QueryRequest):
