@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import React from "react";
+import { MessageCircle, X } from "lucide-react";
 
 interface ChatButtonProps {
   isOpen: boolean;
@@ -10,6 +9,7 @@ interface ChatButtonProps {
 const ChatButton: React.FC<ChatButtonProps> = ({ isOpen, toggleChat }) => {
   return (
     <button
+      data-chat-button="true"
       onClick={toggleChat}
       className="fixed bottom-6 right-6 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-transform transform hover:scale-110 z-50"
       aria-label={isOpen ? "Close chat" : "Open chat"}

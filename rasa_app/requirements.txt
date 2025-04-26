@@ -6,3 +6,6 @@ structlog==23.3.0
 structlog-sentry==2.1.0
 urllib3==1.26.20
 cryptography==41.0.7
+
+dotenv
+python_dotenv

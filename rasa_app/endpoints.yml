@@ -1,5 +1,2 @@
 action_endpoint:
   url: "http://localhost:5055/webhook"
-
-tracker_store:
-  type: in_memory

@@ -1,6 +1,8 @@
 import logging
 import requests
 from typing import Any, Text, Dict, List
+from dotenv import load_dotenv
+import os
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -11,7 +13,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-RAG_SERVICE_URL = "http://localhost:8000/query"
+load_dotenv()
+
+RAG_SERVICE_URL = os.getenv('RAG_URL')
 
 
 class ActionGetInfo(Action):
@@ -32,11 +36,12 @@ class ActionGetInfo(Action):
         payload = {"question": user_message}
         answer_text = ""
         try:
-            response = requests.post(RAG_SERVICE_URL, json=payload, timeout=10)
+            response = requests.post(RAG_SERVICE_URL, json=payload, timeout=1000)
             if response.status_code == 200:
                 answer_text = response.json().get("answer") or \
                     "I'm sorry, I couldn't find an answer to your question."
             else:
+                logger.error(f"RAG service returned status {response.status_code}")
                 answer_text = "I'm sorry, I couldn't retrieve the information at the moment."
         except Exception as e:
             logger.error(f"RAG service error: {e}")
