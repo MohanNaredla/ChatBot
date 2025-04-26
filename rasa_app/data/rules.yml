@@ -35,3 +35,8 @@ rules:
     steps:
       - intent: nlu_fallback
       - action: utter_out_of_scope
+
+  - rule: Respond to security concerns
+    steps:
+      - intent: security_concern
+      - action: utter_security_concern

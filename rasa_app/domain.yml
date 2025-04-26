@@ -6,27 +6,57 @@ intents:
   - help
   - get_info
   - out_of_scope
+  - security_concern
 
 responses:
   utter_greet:
     - text: "Hello! I am the Attendance Improvement Plan assistant. How can I help you today?"
     - text: "Hi there! I'm here to answer questions about the Attendance Improvement Plan (AIP). What would you like to know?"
+    - text: "Welcome to the AIP assistant! I can help you navigate the Attendance Improvement Plan system. What questions do you have?"
+    - text: "Good day! I'm your AIP virtual assistant, ready to help with any questions about the Attendance Improvement Plan."
+    - text: "Greetings! How can I assist you with the Attendance Improvement Plan today?"
+    - text: "Hello and welcome! I'm here to help with any AIP-related questions you might have."
 
   utter_goodbye:
     - text: "Goodbye! Feel free to reach out if you have any more questions."
     - text: "Bye for now. I'm here if you need more help with AIP."
+    - text: "Thanks for chatting! Come back anytime you need assistance with the Attendance Improvement Plan."
+    - text: "Have a great day! I'll be here when you need more help with AIP."
+    - text: "Until next time! Remember, I'm always here to answer your AIP questions."
+    - text: "Farewell! Don't hesitate to return if you need more information about the Attendance Improvement Plan system."
 
   utter_thank:
     - text: "You're welcome!"
     - text: "Happy to help!"
+    - text: "Glad I could be of assistance!"
+    - text: "My pleasure! That's what I'm here for."
+    - text: "No problem at all. Is there anything else you'd like to know about AIP?"
+    - text: "You're very welcome. I'm always here to help with your AIP questions."
+    - text: "Anytime! Supporting AIP users is my primary function."
 
   utter_help:
     - text: "I can assist you with the Attendance Improvement Plan system. You can ask about registration, logging in, reports, plan tiers, deadlines, role responsibilities, and more. What would you like to know?"
     - text: "Sure! I can help with AIP questions (registration, login, reports, plan details, deadlines, roles, etc.). What information do you need?"
+    - text: "I'm your AIP assistant and can answer questions about user registration, system access, role permissions, reporting features, data synchronization, and other aspects of the Attendance Improvement Plan. How can I help you today?"
+    - text: "As your AIP guide, I can provide information on how to use the system, explain different user roles, help with login issues, describe available reports, and clarify attendance plan requirements. What are you interested in learning more about?"
+    - text: "I'm here to help with all aspects of the Attendance Improvement Plan, including account management, viewing and editing plans, generating reports, understanding user roles, and navigating the system interface. What would you like assistance with?"
+    - text: "My purpose is to provide information about the AIP system. I can explain how to register, use the two-factor authentication, navigate different sections, understand reporting options, manage user accounts, and interpret attendance data. What's your question?"
 
   utter_out_of_scope:
     - text: "I'm sorry, I can only assist with questions related to the Attendance Improvement Plan system."
     - text: "My apologies, but I can only help with Attendance Improvement Plan (AIP) related questions at this time."
+    - text: "I'm specifically designed to help with the AIP system and can't provide information about other topics. Is there something about attendance plans I can help with?"
+    - text: "That's beyond my area of expertise. I'm programmed to assist with the Attendance Improvement Plan system. Could I help you with something AIP-related instead?"
+    - text: "I'm afraid I can only answer questions about the Attendance Improvement Plan. For other topics, you might want to try a different resource or contact your IT support team."
+    - text: "My knowledge is limited to the Attendance Improvement Plan system. I'd be happy to help with any AIP-related questions you might have instead."
+    - text: "Sorry, but that falls outside my capabilities. I'm specialized in providing support for the Attendance Improvement Plan. Is there something about AIP I can assist you with?"
+
+  utter_security_concern:
+    - text: "I cannot provide assistance with unauthorized access attempts or security exploits. The AIP system has security measures in place to protect sensitive student data. Attempting to bypass these security measures may violate the Computer Fraud and Abuse Act and education privacy laws. If you need legitimate access, please contact your school administrator."
+    - text: "I'm unable to help with that request. The AIP system is designed to protect confidential student attendance data, and attempting unauthorized access would violate both the system's terms of use and potentially state and federal laws. If you're having trouble with legitimate access, please contact your district administrator."
+    - text: "That request involves potentially unauthorized access to the AIP system. I can only provide assistance with legitimate use of the platform. The system includes audit logs that track access attempts for security purposes. If you need help with proper system access, please reach out to your IT support team."
+    - text: "I can't provide information about bypassing system security. The Attendance Improvement Plan contains protected educational records, and unauthorized access attempts may result in account suspension and could have legal consequences. For help with proper system access, please consult your school's AIP administrator."
+    - text: "Sorry, but I'm designed to help with legitimate use of the AIP system only. Attempting to gain unauthorized access to educational records violates FERPA and other privacy regulations. If you're experiencing access issues with your account, please use the official channels to contact support."
 
 actions:
   - action_get_info

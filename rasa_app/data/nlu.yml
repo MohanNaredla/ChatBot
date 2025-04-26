@@ -60,42 +60,36 @@ nlu:
 
   - intent: get_info
     examples: |
-      - What is the Attendance Improvement Plan?
-      - What does AIP stand for?
-      - How does the AIP system work?
-      - How do I register for the AIP system?
-      - How can I create an AIP account?
-      - How can I sign up for AIP?
-      - How do I log in to the AIP portal?
-      - Where do I log in for AIP?
-      - I forgot my AIP password, how can I reset it?
-      - How can I change my password on the AIP system?
-      - How do I view attendance reports?
-      - Where can I find attendance reports in AIP?
-      - How do I generate an attendance report?
-      - What are the different tiers in an attendance plan?
-      - What is a Tier 1 attendance plan?
-      - What is a Tier 2 plan?
-      - What is a Tier 3 plan?
-      - What is a Tier 4 intervention?
-      - Could you explain the tiers of the attendance plan?
-      - What is the deadline for submitting an AIP?
-      - When do I need to submit the attendance improvement plan?
-      - What are the deadlines for AIP submissions?
-      - Who is responsible for tracking attendance in AIP?
-      - What are the responsibilities of a teacher in the AIP process?
-      - What does a principal do in the AIP?
-      - What can a district administrator do in AIP?
-      - What are the roles in the AIP system?
-      - What permissions do school administrators have in AIP?
-      - How do Tier 2 interventions differ from Tier 1?
-      - Explain the role comparison for AIP roles.
-      - Where can I find the AIP user manual?
-      - Is there a guide for using the AIP system?
-      - How often are attendance reports updated in AIP?
-      - How can I improve attendance using AIP?
-      - Tell me about the attendance improvement plan.
-      - Give me an overview of the AIP process.
+      - What is the Attendance Improvement Plan system?
+      - How does AIP help track student attendance?
+      - What are the main features of the AIP?
+      - How do I register for a new account?
+      - What email address can I use to register?
+      - What are the password requirements?
+      - How do I log in to the system?
+      - What is the two-step authentication process?
+      - What's the difference between PED Viewer and Absence Coordinator?
+      - What permissions does an IT Administrator have?
+      - Who can create announcements?
+      - Which role can edit attendance plans?
+      - What should I see when I first log in?
+      - How do I select my role with multiple assignments?
+      - How can I view school attendance plans?
+      - How do I access attendance reports?
+      - What types of reports can I view?
+      - How do I approve new user registrations?
+      - Where is the approve/reject users screen?
+      - How do I manage user accounts?
+      - How do I reset a user's password?
+      - How do I deactivate a user account?
+      - How do I create a new school year?
+      - How can I sync data with STARS?
+      - How do I refresh the STARS snapshot?
+      - How do I schedule system maintenance?
+      - What reports are available in the system?
+      - How do I generate a missing strategies report?
+      - How do I search in reports?
+      - How do I filter reports by district?
 
   - intent: out_of_scope
     examples: |
@@ -109,3 +103,20 @@ nlu:
       - What is the capital of France?
       - Can you solve math problems?
       - Do you know any good movies?
+
+  - intent: security_concern
+    examples: |
+      - How do I hack an AIP account?
+      - Can I access someone else's attendance data?
+      - How can I bypass the login security?
+      - Is there a way to crack the password?
+      - How do I get admin access without permission?
+      - Can you tell me how to access restricted reports?
+      - How to break into the IT Panel?
+      - Ways to get unauthorized access to the system
+      - How do I impersonate another user?
+      - Can I fake the two-factor authentication?
+      - How to exploit security vulnerabilities in AIP
+      - How to change other people's data
+      - Methods to hack the attendance database
+      - How to create a backdoor in the system

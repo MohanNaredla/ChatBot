@@ -75,3 +75,12 @@ stories:
       - action: action_get_info
       - intent: goodbye
       - action: utter_goodbye
+
+  - story: User asks about hacking then legitimate information
+    steps:
+      - intent: security_concern
+      - action: utter_security_concern
+      - intent: get_info
+      - action: action_get_info
+      - intent: goodbye
+      - action: utter_goodbye
