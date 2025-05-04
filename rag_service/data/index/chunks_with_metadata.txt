@@ -1,0 +1,631 @@
+{'manual': 'AllManualsIntro', 'page': 3, 'section': '1', 'section_title': 'Introduction', 'sub_section': '1.1', 'sub_title': 'About AIP', 'role': 'General'}
+1.1 About AIP
+The Attendance Improvement Plan (AIP) is an online system that helps New Mexico schools to create student
+attendance plan and create action plans to improve it.
+•
+Track student attendance trends across schools.
+•
+Plan evidence-based strategies to improve attendance.
+•
+Monitor progress through reporting periods (4 80-day, 120-day, and end-of-year).
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 3, 'section': '2', 'section_title': 'Getting Started', 'sub_section': '2.1', 'sub_title': 'How to Register', 'role': 'School Absence Coordinator'}
+2.1 How to Register
+1. Click "Register New Account"
+2. Fill Out:
+o
+First Name / Last Name
+o
+School Email (e.g., school.nm.gov; personal emails like Gmail are blocked).
+o
+School Name (select from dropdown).
+o
+Phone Number
+o
+Password Requirements:
+1. 12+ characters
+2. 1 uppercase, 1 number, 1 special character (!, @, #, etc.).
+3. Expires every 60 days.
+o
+Role: Select School Absence Coordinator.
+3. Submit: Your request will be approved by your District Absence Coordinator or PED Absence
+Coordinator.
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 4, 'section': '2', 'section_title': 'Getting Started', 'sub_section': '2.2', 'sub_title': 'Logging In', 'role': 'School Absence Coordinator'}
+2.2 Logging In
+1. Visit Application
+2. Enter Credentials:
+o
+Registered email
+o
+Password
+3. Two-Step Authentication:
+o
+A one-time code (OTP) will be sent to your email. Enter it to proceed.
+Login Screen Overview:
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 4, 'section': '2', 'section_title': 'Getting Started', 'sub_section': '2.3', 'sub_title': 'First-Time Setup', 'role': 'School Absence Coordinator'}
+2.3 First-Time Setup
+•
+Landing Page: If you have multiple roles (e.g., School + District Coordinator), select your role.
+•
+Home Screen: Displays certified schools/districts for the fiscal year.
+•
+Announcements: Check for PED alerts (e.g., deadlines, policy updates).
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 5, 'section': '3', 'section_title': 'Creating Your Plan', 'sub_section': '3.1', 'sub_title': 'Step 1: Contact Information', 'role': 'School Absence Coordinator'}
+3.1 Step 1: Contact Information
+Purpose:
+Identify the primary contact for the attendance plan and add team members involved in the process.
+Steps:
+1. School Contact:
+o
+Enter the contact person’s first name, last name, title, and email.
+o
+Example:
+LEA Name: BELEN CONSOLIDATED SCHOOLS
+School Name: BELEN HIGH
+Contact First Name: Kristin
+Contact Last Name: Garcia
+Contact Email: garcia@tech.com
+Save Progress:
+•
+Click "Save" before navigating to the next tab.
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 5, 'section': '3', 'section_title': 'Creating Your Plan', 'sub_section': '3.2', 'sub_title': 'Step 2: Subpopulation Improvement Targets', 'role': 'School Absence Coordinator'}
+3.2 Step 2: Subpopulation Improvement Targets
+Purpose:
+Identify attendance disparities across student groups to target interventions effectively.
+How to Access:
+1. Navigate to: Home > [Your School] > Subpopulation Improvement Targets
+2. Two sections appear:
+o
+Chronic Absence Data for Subpopulations (Demographics)
+o
+Chronic Absence Data for Grade Levels
+A. Chronic Absence by Subpopulation
+Data Fields:
+Column
+Description
+Subpopulation Name
+Auto-filled groups (e.g., Female, Economically-Disadvantaged).
+Current Year Enrollment
+Total students in subgroup (auto pulled from backend).
+Historical Rates
+Historical chronic absence rates (grayed out; read-only).
+Current Year Target
+Enter your goal (%) to reduce chronic absence for each subgroup.
+B. Chronic Absence by Grade Level
+Data Fields:
+Column
+Description
+Grade Level
+Pre-K through 12th grade (auto-filled).
+Current Year Enrollment Total students per grade (auto-pulled).
+Historical Rates
+Past chronic absence rates (read-only).
+Current Year Target
+Set grade-specific improvement goals.
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 7, 'section': '3', 'section_title': 'Creating Your Plan', 'sub_section': '3.3', 'sub_title': 'Step 3: Root Cause Analysis', 'role': 'School Absence Coordinator'}
+3.3 Step 3: Root Cause Analysis
+Purpose:
+Document the underlying causes of chronic absenteeism using research and local data.
+Sections to Complete:
+1. National/Local Research:
+o
+Describe trends (e.g., "Transportation barriers affect 30% of students").
+2. Supportive Factors:
+o
+Existing resources (e.g., "Strong parent engagement programs").
+3. Barriers:
+o
+Challenges (e.g., "Transportation Gaps"," Language Barriers”).
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 8, 'section': '3', 'section_title': 'Creating Your Plan', 'sub_section': '3.4', 'sub_title': 'Step 4: Tiers of Support', 'role': 'School Absence Coordinator'}
+3.4 Step 4: Tiers of Support
+Purpose:
+Develop targeted interventions based on chronic absence severity. Each tier corresponds to a student's
+absenteeism level and requires specific strategies.
+Four Tiers:
+Tier Absence Rate Focus
+1
+0-5%
+Whole-school prevention
+2
+5-10%
+Individualized support
+3
+10-20%
+Early intervention
+4
+20%+
+Intensive support
+Tier 1: Whole School Prevention (0–5% Absence Rate)
+Focus: School-wide programs to promote attendance for all students.
+Steps to Complete:
+1. Add Strategy
+o
+Select from predefined options (e.g., "Engaging School Climate," "Parent Outreach Programs"
+or Other).
+o
+Or Other Strategies
+o
+Example: "Monthly attendance reward assemblies."
+2. Implementation Plan
+o
+Action Steps: List specific activities (e.g., "Host biweekly parent workshops").
+o
+Responsible Parties: Assign staff (e.g., "Counselor: Maria Garcia").
+o
+Resources Needed: Budget, materials (e.g., "$500 for incentive prizes").
+o
+Timeline: Set milestones (e.g., "Launch by October 15").
+Tier 2: Individualized Prevention (5–10% Absence Rate)
+Focus: Targeted support for students at risk of chronic absence.
+Steps to Complete:
+1. Add Strategy
+o
+Choose interventions (e.g., "Attendance Mentoring," "Check-In/Check-Out Systems").
+o
+Or Other Strategies
+2. Implementation Plan
+o
+Action Steps: "Pair at-risk students with peer mentors."
+o
+Responsible Parties: "Mentor Coordinator: John Doe."
+o
+Resources: "Training materials for mentors."
+o
+Timeline: "Match mentors by Week 6."
+Tier 3: Early Intervention (10–20% Absence Rate)
+Focus: Address emerging chronic absence with structured support.
+Steps to Complete:
+1. Add Strategy
+o
+Select options like "Family Resource Referrals" or "Academic Support Plans."
+o
+Or Other Strategies
+2. Implementation Plan
+o
+Action Steps: "Schedule home visits for students missing >15%."
+o
+Responsible Parties: "Social Worker: Lee Chen."
+o
+Resources: "Transportation for home visits."
+o
+Timeline: "Complete visits by November 30."
+Tier 4: Intensive Support (20%+ Absence Rate)
+Focus: High-intensity interventions for severe chronic absence.
+Steps to Complete:
+1. Add Strategy
+o Choose options like "Case Management" or "Community Agency Partnerships."
+o
+Or Other Strategies
+2. Implementation Plan
+o
+Action Steps: "Coordinate with local clinics for health barriers."
+o
+Responsible Parties: "Nurse: Sarah Kim."
+o
+Resources: "Memorandum of Understanding with Clinic X."
+o
+Timeline: "Sign MOU by September 1."
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 13, 'section': '3', 'section_title': 'Creating Your Plan', 'sub_section': '3.5', 'sub_title': 'Step 5: Final Submission', 'role': 'School Absence Coordinator'}
+3.5 Step 5: Final Submission
+Steps:
+1. Review all entered data.
+2. Check the certification box:
+o
+"I certify this plan is complete."
+3. Click "Submit Plan."
+o
+Note: Submitted plans can only be edited after PED/district review.
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 13, 'section': '3', 'section_title': 'Creating Your Plan', 'sub_section': '3.6', 'sub_title': 'Step 6: Progress Updates', 'role': 'School Absence Coordinator'}
+3.6 Step 6: Progress Updates
+Reporting Periods:
+•
+80-day
+•
+120-day
+•
+end-of-year updates.
+Steps:
+1. Current Chronic absence rates (Pulled from Backend).
+2. Reflect on strategy effectiveness.
+3. Adjust targets for the next period.
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 14, 'section': '3', 'section_title': 'Creating Your Plan', 'sub_section': '3.7', 'sub_title': 'Step 7: Print Your Plan', 'role': 'School Absence Coordinator'}
+3.7 Step 7: Print Your Plan
+Options:
+1. Full PDF Report: Includes all sections and charts.
+2. Custom Reports: Select specific sections for sharing.
+Steps:
+1. Click "Print Plan."
+2. Choose format and generate.
+============================================================
+{'manual': 'School Absence Coordinator UserManual', 'page': 14, 'section': '4', 'section_title': 'Support & Troubleshooting', 'sub_section': '', 'sub_title': '', 'role': 'School Absence Coordinator'}
+4. Support & Troubleshooting
+Common Issues:
+•
+Login Problems: Ensure OTP is entered correctly.
+•
+Data Not Saving: Refresh and reconnect.
+•
+Broken Screens: Contact IT support.
+============================================================
+{'manual': 'PED Roles UserManual', 'page': 6, 'section': '3', 'section_title': 'PED Viewer', 'sub_section': '3.1', 'sub_title': 'District and School Plans', 'role': 'PED Viewer'}
+3.1 District and School Plans
+PED Viewer can view the attendance improvement plan for school and districts.
+Note: PED Viewer have view only access
+How to Access:
+1) Navigate to: Home > Select the [School/District] from the dropdown > Click
+============================================================
+{'manual': 'PED Roles UserManual', 'page': 6, 'section': '3', 'section_title': 'PED Viewer', 'sub_section': '3.2', 'sub_title': 'Announcements', 'role': 'PED Viewer'}
+3.2 Announcements
+Purpose:
+Search/View the announcements created by PED Absence Coordinator
+How to Access:
+1. Navigate to: Home > [Announcements]
+============================================================
+{'manual': 'PED Roles UserManual', 'page': 7, 'section': '3', 'section_title': 'PED Viewer', 'sub_section': '3.3', 'sub_title': 'Reports', 'role': 'PED Viewer'}
+3.3 Reports
+Purpose:
+The PED Viewer has read-only access to attendance reports to monitor and analyze trends in district-
+wide and school-level attendance data.
+Types of reports:
+•
+Contact information Report
+•
+Attendance Plan submitted Report
+•
+Missing Strategy Information Report
+How to Access:
+1. Navigate to: Home > [Reports]
+============================================================
+{'manual': 'PED Roles UserManual', 'page': 7, 'section': '4', 'section_title': 'PED Absence Coordinator', 'sub_section': '4.1', 'sub_title': 'District and School Plans', 'role': 'PED Absence Coordinator'}
+4.1 District and School Plans
+Purpose:
+The PED Absence Coordinator oversees and supports the implementation of AIPs to:
+•
+Ensure Compliance – Verify that all district and school plans meet state attendance guidelines.
+•
+Identify Systemic Issues – Analyze trends and root causes of chronic absenteeism across multiple
+schools/districts.
+•
+Facilitate Interventions – Guide schools in refining strategies (Tiers 1–4) based on comparative
+data.
+•
+Drive Accountability – Track after every reporting progress and adjust district-wide targets as
+needed.
+•
+Promote Best Practices – Share successful interventions between schools/districts.
+How to Access:
+1. Navigate to: Home > [School/District]
+============================================================
+{'manual': 'PED Roles UserManual', 'page': 8, 'section': '4', 'section_title': 'PED Absence Coordinator', 'sub_section': '4.2', 'sub_title': 'Approve/ Reject User', 'role': 'PED Absence Coordinator'}
+4.2 Approve/ Reject User
+Purpose:
+The PED Absence Coordinator manages the system of access to:
+•
+Ensure Data Security – Grant permissions only to authorized personnel (e.g., school staff, district
+coordinators) to protect sensitive attendance data.
+•
+Maintain Accountability – Verify user roles align with their responsibilities (e.g., prevent
+unauthorized edits to attendance plans).
+How to Access:
+1. Navigate to: Home > [Approve/Reject Users]
+============================================================
+{'manual': 'PED Roles UserManual', 'page': 9, 'section': '4', 'section_title': 'PED Absence Coordinator', 'sub_section': '4.3', 'sub_title': 'Manage Users', 'role': 'PED Absence Coordinator'}
+4.3 Manage Users
+Purpose:
+The PED Absence Coordinator oversees user account management to:
+✔ Maintain Accurate User Data
+•
+Update contact details (name, email, phone) to ensure correct communication.
+•
+Assign proper districts/schools to align users with their operational scope.
+✔ Control System Access & Permissions
+•
+Assign, modify, or revoke user roles (e.g., school staff vs. district admin) to enforce role-based
+security.
+•
+Deactivate accounts for inactive users or role changes to prevent unauthorized access.
+✔ Support User Productivity
+•
+Initiate password resets to resolve login issues swiftly.
+•
+Correct profile errors (e.g., typos in names/emails) to avoid workflow disruptions.
+✔ Ensure Compliance & Security
+•
+Align user permissions with district/state policies (e.g., restrict school staff to their designated
+schools).
+•
+Mitigate risks by promptly disabling accounts for departing employees.
+How to Access:
+1. Navigate to: Home >[Admin] > [Manage Users]
+============================================================
+{'manual': 'PED Roles UserManual', 'page': 10, 'section': '4', 'section_title': 'PED Absence Coordinator', 'sub_section': '4.4', 'sub_title': 'Reports', 'role': 'PED Absence Coordinator'}
+4.4 Reports
+Purpose:
+The Reports section equips the PED Absence Coordinator with critical data insights to:
+✔ Maintain Accurate Contact Information
+•
+Access the Contact Information Report to verify and update school/district personnel details,
+ensuring proper communication channels for attendance interventions.
+✔ Monitor Compliance & Completion
+•
+Review the Attendance Plan Submission Report to track which schools/districts have submitted
+required improvement plans and identify non-compliant institutions.
+✔ Identify Gaps in Intervention Strategies
+•
+Analyze the Missing Strategies Information Report to detect schools lacking tiered intervention
+plans (Tiers 1–4) and provide targeted support.
+How to Access:
+1. Navigate to: Home > [Reports]
+============================================================
+{'manual': 'PED Roles UserManual', 'page': 11, 'section': '5', 'section_title': 'IT administrator', 'sub_section': '5.1', 'sub_title': 'IT Panel', 'role': 'IT administrator'}
+5.1 IT Panel
+Purpose:
+Configure Academic Cycles
+•
+Create/Edit School Years: Set up new academic terms and align them with reporting
+requirements.
+•
+Set Reporting Periods: Define active intervals for attendance tracking (e.g., every reporting
+period/semester cycles).
+✔ Synchronize Data Systems
+•
+Refresh STARS Snapshots: Sync attendance data with state databases to ensure accuracy.
+•
+Update School Year Status: Mark years as active/archived to control data submission windows.
+•
+Set Maintenance Messages: Notify users of scheduled downtime or system updates to minimize
+disruptions and set clear expectations.
+How to Access:
+1. Navigate to: Home >[Admin] > [IT Panel]
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 3, 'section': '2', 'section_title': 'Getting Started', 'sub_section': '2.1', 'sub_title': 'How to Register', 'role': 'District Absence Coordinator'}
+2.1 How to Register
+1. Click "Register New Account"
+2. Fill Out:
+o
+First Name / Last Name
+o
+District Email (e.g., district.nm.gov; personal emails like Gmail are blocked).
+o
+District Name (select from dropdown).
+o
+Phone Number
+o
+Password Requirements:
+1. 12+ characters
+2. 1 uppercase, 1 number, 1 special character (!, @, #, etc.).
+3. Expires every 60 days.
+o
+Role: Select District Absence Coordinator.
+3. Submit: Your request will be approved by PED Absence Coordinator.
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 4, 'section': '2', 'section_title': 'Getting Started', 'sub_section': '2.2', 'sub_title': 'Logging In', 'role': 'District Absence Coordinator'}
+2.2 Logging In
+1. Visit Application
+2. Enter Credentials:
+o
+Registered email
+o
+Password
+3. Two-Step Authentication:
+o
+A one-time code (OTP) will be sent to your email. Enter it to proceed.
+Login Screen Overview:
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 4, 'section': '2', 'section_title': 'Getting Started', 'sub_section': '2.3', 'sub_title': 'First-Time Setup', 'role': 'District Absence Coordinator'}
+2.3 First-Time Setup
+•
+Landing Page: If you have multiple roles (e.g., School + District Coordinator), select your role.
+•
+Home Screen: Displays certified schools/districts for the fiscal year.
+•
+Announcements: Check for PED alerts (e.g., deadlines, policy updates).
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 5, 'section': '3', 'section_title': 'Creating Your District Plan', 'sub_section': '3.1', 'sub_title': 'Step 1: District Contact Information', 'role': 'District Absence Coordinator'}
+3.1 Step 1: District Contact Information
+Purpose:
+Identify the primary contact for the attendance plan and add team members involved in the process.
+Steps:
+1. School Contact:
+o
+Enter the contact person’s first name, last name, title, and email.
+o
+Example:
+LEA Name: BELEN CONSOLIDATED SCHOOLS
+School Name: BELEN HIGH
+Contact First Name: Kristin
+Contact Last Name: Garcia
+Contact Email: garcia@tech.com
+Save Progress:
+•
+Click "Save" before navigating to the next tab.
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 6, 'section': '3', 'section_title': 'Creating Your District Plan', 'sub_section': '3.2', 'sub_title': 'Step 2: School Improvement Targets', 'role': 'District Absence Coordinator'}
+3.2 Step 2: School Improvement Targets
+Purpose:
+Enable district Absence Coordinator to set and monitor attendance improvement targets for their district and
+subsequent schools.
+How to Access:
+1. Navigate to: Home > [Your District] > School Improvement Targets
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 6, 'section': '3', 'section_title': 'Creating Your District Plan', 'sub_section': '3.3', 'sub_title': 'Step 3: Subpopulation Improvement Targets', 'role': 'District Absence Coordinator'}
+3.3 Step 3: Subpopulation Improvement Targets
+Purpose:
+Identify attendance disparities across student groups to target interventions effectively.
+How to Access:
+2. Navigate to: Home > [Your District] > Subpopulation Improvement Targets
+3. Two sections appear:
+o
+District Attendance Improvement Targets (Demographics)
+o
+District Grade Improvement Targets
+A. District Attendance Improvement Targets
+Data Fields:
+Column
+Description
+Subpopulation Name
+Auto-filled groups (e.g., Female, Economically-
+Disadvantaged).
+Current Year Enrollment Number
+Total students in subgroup (auto pulled from backend).
+Historical Chronic Absence Rates
+Historical chronic absence rates (grayed out; read-only).
+Current Year Attendance Improvement
+Target
+Enter your goal (%) to reduce chronic absence for each
+subgroup.
+B. District Grade Improvement Targets
+Data Fields:
+Column
+Description
+Subpopulation Grade Level
+Pre-K through 12th grade (auto-filled).
+Current Year Enrollment Number
+Total students per grade (auto-pulled).
+Historical Chronic Absence Rates
+Past chronic absence rates (read-only).
+Current Year Attendance Improvement Target
+Set grade-specific improvement goals.
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 8, 'section': '3', 'section_title': 'Creating Your District Plan', 'sub_section': '3.4', 'sub_title': 'Step 4: Tiers of Support', 'role': 'District Absence Coordinator'}
+3.4 Step 4: Tiers of Support
+Purpose:
+Develop targeted interventions based on chronic absence severity. Each tier corresponds to a student's
+absenteeism level and requires specific strategies.
+Four Tiers:
+Tier Absence Rate Focus
+1
+0-5%
+Whole-school prevention
+2
+5-10%
+Individualized support
+3
+10-20%
+Early intervention
+4
+20%+
+Intensive support
+Tier 1: Whole School Prevention (0–5% Absence Rate)
+Focus: School-wide programs to promote attendance for all students.
+Steps to Complete:
+1. Add Strategy
+o
+Select from predefined options (e.g., "Engaging School Climate," "Parent Outreach Programs" or
+Other).
+o
+Or Other Strategies
+o
+Example: "Monthly attendance reward assemblies."
+2. Implementation Plan
+o
+Action Steps: List specific activities (e.g., "Host biweekly parent workshops").
+o
+Responsible Parties: Assign staff (e.g., "Counselor: Maria Garcia").
+o
+Resources Needed: Budget, materials (e.g., "$500 for incentive prizes").
+o
+Timeline: Set milestones (e.g., "Launch by October 15").
+Tier 2: Individualized Prevention (5–10% Absence Rate)
+Focus: Targeted support for students at risk of chronic absence.
+Steps to Complete:
+1. Add Strategy
+o
+Choose interventions (e.g., "Attendance Mentoring," "Check-In/Check-Out Systems").
+o
+Or Other Strategies
+2. Implementation Plan
+o
+Action Steps: "Pair at-risk students with peer mentors."
+o
+Responsible Parties: "Mentor Coordinator: John Doe."
+o
+Resources: "Training materials for mentors."
+o
+Timeline: "Match mentors by Week 6."
+Tier 3: Early Intervention (10–20% Absence Rate)
+Focus: Address emerging chronic absence with structured support.
+Steps to Complete:
+1. Add Strategy
+o
+Select options like "Family Resource Referrals" or "Academic Support Plans."
+o
+Or Other Strategies
+2. Implementation Plan
+o
+Action Steps: "Schedule home visits for students missing >15%."
+o
+Responsible Parties: "Social Worker: Lee Chen."
+o
+Resources: "Transportation for home visits."
+o
+Timeline: "Complete visits by November 30."
+Tier 4: Intensive Support (20%+ Absence Rate)
+Focus: High-intensity interventions for severe chronic absence.
+Steps to Complete:
+1. Add Strategy
+o
+Choose options like "Case Management" or "Community Agency Partnerships."
+o
+Or Other Strategies
+2. Implementation Plan
+o
+Action Steps: "Coordinate with local clinics for health barriers."
+o
+Responsible Parties: "Nurse: Sarah Kim."
+o
+Resources: "Memorandum of Understanding with Clinic X."
+o
+Timeline: "Sign MOU by September 1."
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 13, 'section': '3', 'section_title': 'Creating Your District Plan', 'sub_section': '3.5', 'sub_title': 'Step 5: Final Submission', 'role': 'District Absence Coordinator'}
+3.5 Step 5: Final Submission
+Steps:
+1. Review all entered data.
+2. Check the certification box:
+o
+" I confirm that my submission is complete and final.”
+3. Click "Submit Plan."
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 14, 'section': '3', 'section_title': 'Creating Your District Plan', 'sub_section': '3.6', 'sub_title': 'Step 6: Progress Updates', 'role': 'District Absence Coordinator'}
+3.6 Step 6: Progress Updates
+Reporting Periods:
+•
+40-day
+•
+80-day
+•
+120-day
+Steps:
+1. Current Chronic absence rates (Pulled from Backend).
+2. Reflect on strategy effectiveness.
+3. Adjust targets for the next period.
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 14, 'section': '3', 'section_title': 'Creating Your District Plan', 'sub_section': '3.7', 'sub_title': 'Step 7: Print Your Plan', 'role': 'District Absence Coordinator'}
+3.7 Step 7: Print Your Plan
+Options:
+1. Full PDF Report: Includes all sections and charts.
+2. Custom Reports: Select specific sections for sharing.
+Steps:
+1. Click "Print Plan."
+2. Choose format and generate.
+============================================================
+{'manual': 'District Absence Coordinator UserManual', 'page': 15, 'section': '4', 'section_title': 'Support & Troubleshooting', 'sub_section': '', 'sub_title': '', 'role': 'District Absence Coordinator'}
+4. Support & Troubleshooting
+Common Issues:
+•
+Login Problems: Ensure OTP is entered correctly.
+•
+Data Not Saving: Refresh and reconnect.
+•
+Broken Screens: Contact IT support.
+============================================================
