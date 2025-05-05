@@ -21,7 +21,7 @@ def call_service(question):
 def inspect(question):
     return requests.post("http://localhost:8000/inspect", json={"question": question}).json()
 
-def retrieve_chunks(question, top_k=5):
+def retrieve_chunks(question, top_k=2):
     emb = SentenceTransformerEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     vs = FAISS.load_local("data/index/faiss", emb, allow_dangerous_deserialization=True)
     with open("data/index/bm25.pkl", "rb") as f:
@@ -39,15 +39,6 @@ def retrieve_chunks(question, top_k=5):
     if flt:
         dense = [d for d in dense if any(f in d.metadata["manual"] for f in flt)] or dense
     expanded = list(dense)
-    for d in dense:
-        m, s, sub = d.metadata["manual"], d.metadata["section"], d.metadata["sub_section"]
-        if sub:
-            idx = int(sub.split(".")[1])
-            for n in (idx - 1, idx + 1):
-                key = (m, s, f"{s}.{n}")
-                if key in neigh:
-                    i = neigh[key]
-                    expanded.append(Document(page_content=texts[i], metadata=metas[i]))
     unique = {}
     for d in expanded:
         k = (d.metadata["manual"], d.metadata["section"], d.metadata["sub_section"])

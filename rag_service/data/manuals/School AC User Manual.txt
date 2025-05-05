@@ -1,4 +1,17 @@
-{'manual': 'School AC User Manual', 'section': '2', 'section_title': 'Getting\u202fStarted', 'sub_section': '2.1', 'sub_title': 'How\u202fto\u202fRegister'}
+1. Introduction  
+1.1 About AIP  
+The Attendance Improvement Plan (AIP) is an online system that helps New Mexico schools create student attendance plans and action steps to improve them.  
+• Track student‑attendance trends across schools.  
+• Plan evidence‑based strategies to improve attendance.  
+• Monitor progress through reporting periods (80‑day, 120‑day, and end‑of‑year).  
+
+1.2 Your Responsibilities as School Absence Coordinator  
+✔ Submit an annual attendance‑improvement plan for your school.  
+✔ Analyze root causes of chronic absenteeism (e.g., transportation, health).  
+✔ Develop tiered intervention strategies (Tiers 1 – 4).  
+✔ Update progress after every reporting period and adjust targets.  
+
+2. Getting Started  
 2.1 How to Register  
 1) Click **Register New Account**.  
 2) Fill out: First Name, Last Name, School Email (school.nm.gov), School Name, Phone Number, Password.  
@@ -8,20 +21,20 @@
    3) Expires every 60 days  
 4) Select **Role: School Absence Coordinator**.  
 5) Submit. Your request **will be approved** by your District or PED Absence Coordinator.  
-============================================================
-{'manual': 'School AC User Manual', 'section': '2', 'section_title': 'Getting\u202fStarted', 'sub_section': '2.2', 'sub_title': 'Logging\u202fIn'}
+
 2.2 Logging In  
 1) Visit the AIP application.  
 2) Enter registered email and password.  
 3) Complete two‑step authentication with the OTP sent to your email.  
-============================================================
-{'manual': 'School AC User Manual', 'section': '2', 'section_title': 'Getting\u202fStarted', 'sub_section': '2.3', 'sub_title': 'First‑Time\u202fSetup'}
+
 2.3 First‑Time Setup  
 1) If you hold multiple roles, choose **School Absence Coordinator**.  
 2) Home Screen – Displays certified schools/districts for the fiscal year.  
 3) Announcements – Review PED alerts (deadlines, policy updates).  
-============================================================
-{'manual': 'School AC User Manual', 'section': '3', 'section_title': 'Creating\u202fYour\u202fSchool\u202fPlan', 'sub_section': '3.1', 'sub_title': 'Step\u202f1\u202f–\u202fContact\u202fInformation'}
+
+3. Creating Your School Plan  
+Follow these 7 steps to complete your school‑level AIP.  
+
 3.1 Step 1 – Contact Information  
 Purpose: Identify the primary contact and add team members.  
 Example:  
@@ -31,8 +44,7 @@ Example:
 4) Contact Last Name: Garcia  
 5) Contact Email: garcia@tech.com  
 6) Save Progress – Click **Save** before navigating to the next tab.  
-============================================================
-{'manual': 'School AC User Manual', 'section': '3', 'section_title': 'Creating\u202fYour\u202fSchool\u202fPlan', 'sub_section': '3.2', 'sub_title': 'Step\u202f2\u202f–\u202fSubpopulation\u202fImprovement\u202fTargets'}
+
 3.2 Step 2 – Subpopulation Improvement Targets  
 Purpose: Identify attendance disparities across student groups.  
 How to Access:  
@@ -40,27 +52,28 @@ How to Access:
 2) Two sections appear:  
    1) Chronic Absence Data Fields for Sub‑populations  
    2) Chronic Absence Data Fields for Grade Levels  
+
 A. **Chronic Absence Data Fields for Sub‑populations**  
 Subpopulation Name: Auto‑filled groups (e.g., Female, Economically‑Disadvantaged)  
 Current Year Enrollment: Total students in subgroup  
 Historical Rates: Read‑only past chronic‑absence rate  
 Current Year Target: Goal (%) to reduce chronic absence  
+
 B. **Chronic Absence Data Fields for Grade Levels**  
 Grade Level: Pre‑K through 12th grade  
 Current Year Enrollment: Total students per grade  
 Historical Rates: Read‑only past chronic‑absence rate  
 Current Year Target: Goal (%) to reduce chronic absence per grade  
-============================================================
-{'manual': 'School AC User Manual', 'section': '3', 'section_title': 'Creating\u202fYour\u202fSchool\u202fPlan', 'sub_section': '3.3', 'sub_title': 'Step\u202f3\u202f–\u202fRoot\u202fCause\u202fAnalysis'}
+
 3.3 Step 3 – Root Cause Analysis  
 Purpose: Document underlying causes of chronic absenteeism.  
 National/Local Research: Describe trends (e.g., “Transportation barriers affect 30 % of students”).  
 Supportive Factors: Existing resources (e.g., “Strong parent‑engagement programs”).  
 Barriers: Challenges (e.g., “Transportation gaps”, “Language barriers”).  
-============================================================
-{'manual': 'School AC User Manual', 'section': '3', 'section_title': 'Creating\u202fYour\u202fSchool\u202fPlan', 'sub_section': '3.4', 'sub_title': 'Step\u202f4\u202f–\u202fTiers\u202fof\u202fSupport'}
+
 3.4 Step 4 – Tiers of Support  
 Purpose: Match absence severity to appropriate interventions.  
+
 1) **Tier 1 (0 – 5 % absence)** : Whole‑school prevention  
    - Steps to complete:  
      1. Add Strategy  
@@ -72,6 +85,7 @@ Purpose: Match absence severity to appropriate interventions.
         o Responsible Parties: Assign staff (e.g., "Counselor: Maria Garcia").  
         o Resources Needed: Budget, materials (e.g., "$500 for incentive prizes").  
         o Timeline: Set milestones (e.g., "Launch by October 15").  
+
 2) **Tier 2 (5 – 10 % absence)** : Individualized support  
    - Steps to complete:  
      1. Add Strategy  
@@ -82,6 +96,7 @@ Purpose: Match absence severity to appropriate interventions.
         o Responsible Parties: "Mentor Coordinator: John Doe."  
         o Resources: "Training materials for mentors."  
         o Timeline: "Match mentors by Week 6."  
+
 3) **Tier 3 (10 – 20 % absence)** : Early intervention  
    - Steps to complete:  
      1. Add Strategy  
@@ -92,6 +107,7 @@ Purpose: Match absence severity to appropriate interventions.
         o Responsible Parties: "Social Worker: Lee Chen."  
         o Resources: "Transportation for home visits."  
         o Timeline: "Complete visits by November 30."  
+
 4) **Tier 4 (20 %+ absence)** : Intensive support  
    - Steps to complete:  
      1. Add Strategy  
@@ -102,32 +118,27 @@ Purpose: Match absence severity to appropriate interventions.
         o Responsible Parties: "Nurse: Sarah Kim."  
         o Resources: "Memorandum of Understanding with Clinic X."  
         o Timeline: "Sign MOU by September 1."  
-============================================================
-{'manual': 'School AC User Manual', 'section': '3', 'section_title': 'Creating\u202fYour\u202fSchool\u202fPlan', 'sub_section': '3.5', 'sub_title': 'Step\u202f5\u202f–\u202fFinal\u202fSubmission\u202fof\u202fSchool\u202fPlan'}
+
 3.5 Step 5 – Final Submission of School Plan  
 1) Review all entered data.  
 2) Check the certification box: “I certify this plan is complete.”  
 3) Click **Submit Plan**.  
 Note: Submitted plans can only be edited after PED/District review.  
-============================================================
-{'manual': 'School AC User Manual', 'section': '3', 'section_title': 'Creating\u202fYour\u202fSchool\u202fPlan', 'sub_section': '3.6', 'sub_title': 'Step\u202f6\u202f–\u202fProgress\u202fUpdates'}
+
 3.6 Step 6 – Progress Updates  
 Reporting Periods: 80‑day, 120‑day, end‑of‑year.  
 Steps:  
 1) Current chronic‑absence rates are auto‑pulled.  
 2) Reflect on strategy effectiveness.  
 3) Adjust targets for the next period.  
-============================================================
-{'manual': 'School AC User Manual', 'section': '3', 'section_title': 'Creating\u202fYour\u202fSchool\u202fPlan', 'sub_section': '3.7', 'sub_title': 'Step\u202f7\u202f–\u202fPrint\u202fYour\u202fPlan'}
+
 3.7 Step 7 – Print Your Plan  
 Steps to print:  
 1) Click **Print Plan**.  
 2) Select **Full PDF Report** to include all sections and charts or select **Custom Report** and tick only the sections you need.  
 3) Click **Generate;**  
-============================================================
-{'manual': 'School AC User Manual', 'section': '4', 'section_title': 'Support\u202f&\u202fTroubleshooting', 'sub_section': '', 'sub_title': ''}
+
 4. Support & Troubleshooting  
 1) Login Problems – Verify OTP and credentials.  
 2) Data Not Saving – Refresh the page and reconnect.  
 3) Broken Screens – Contact IT support.  
-============================================================
