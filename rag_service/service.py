@@ -1,199 +1,151 @@
 import os
 import string
-import sys
 import re
+import difflib
+import sys
 from collections import defaultdict
 import json
 from datetime import time
-import difflib
 
+from pydantic import BaseModel
+import uvicorn
 import pickle
 import numpy as np
-import torch #type:ignore
-from fastapi import FastAPI #type:ignore
-from fastapi.middleware.cors import CORSMiddleware #type:ignore
-import uvicorn #type:ignore
-from pydantic import BaseModel #type:ignore
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+import torch
+from dotenv import load_dotenv
 
-from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSequenceClassification
-from langchain_community.embeddings import SentenceTransformerEmbeddings #type:ignore
-from langchain_community.vectorstores import FAISS #type:ignore
-from langchain.schema import Document #type:ignore
-from huggingface_hub import login #type:ignore
+import openai
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from langchain_community.embeddings import SentenceTransformerEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain.schema import Document
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-token = os.getenv("HF_TOKEN")
-if token:
-    login(token=token)
+load_dotenv()
+OPENAI_KEY = os.getenv('OPENAI_API_KEY')
 
-class Query(BaseModel):
-    question: str
+
+class Retrieve:
+    def __init__(self, query):
+        self.top_k_retrieval = 8
+        self.top_k_rerank = 4
+        self.vs_path = 'data/index/faiss'
+        self.bm_path = 'data/index/bm25.pkl'
+        self.query = query
+        
     
+    def hybrid_retrieve(self):
+        emb = SentenceTransformerEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+        vs = FAISS.load_local(self.vs_path, emb, allow_dangerous_deserialization=True)
+        with open(self.bm_path, 'rb') as f:
+            bm25, texts, metas = pickle.load(f)
 
-emb = SentenceTransformerEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-vs = FAISS.load_local("data/index/faiss", emb, allow_dangerous_deserialization=True)
-with open("data/index/bm25.pkl", "rb") as f:
-    bm25, texts, metas = pickle.load(f)
-neighbor = {(m["manual"], m["section"], m["sub_section"]): i for i, m in enumerate(metas)}
+        dense_docs = vs.similarity_search(self.query, self.top_k_retrieval)
+        dense_doc_ids = {(d.metadata.get('section', ''), d.metadata.get('sub_section'), ''):d for d in dense_docs}
 
-rerank_tok = AutoTokenizer.from_pretrained("BAAI/bge-reranker-base")
-if torch.backends.mps.is_available():
-    rerank_mod = AutoModelForSequenceClassification.from_pretrained("BAAI/bge-reranker-base", torch_dtype=torch.float32).to("mps")
-elif torch.cuda.is_available():
-    rerank_mod = AutoModelForSequenceClassification.from_pretrained("BAAI/bge-reranker-base", device_map="auto", torch_dtype=torch.float16)
-else:
-    rerank_mod = AutoModelForSequenceClassification.from_pretrained("BAAI/bge-reranker-base").to("cpu")
-rerank_mod.eval()
+        tokenized_query = self.query.split()
+        bm25_scores = bm25.get_scores(tokenized_query)
+        all_indices = np.argsort(bm25_scores)
+        bm25_top_indices = all_indices[::-1][:self.top_k_retrieval]
 
-llm_tok = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", use_auth_token=token)
-llm = AutoModelForCausalLM.from_pretrained(
-    "mistralai/Mistral-7B-Instruct-v0.2",
-    device_map="auto" if torch.cuda.is_available() else "cpu",
-    torch_dtype=torch.float16 if torch.cuda.is_available() else None,
-    use_auth_token=token,
-    low_cpu_mem_usage=True,
-)
-llm.eval()
+        bm25_chunks = []
+        for idx in bm25_top_indices:
+            meta = metas[idx]
+            doc_id = (meta.get('section', ''), meta.get('sub_section'), '')
+            if doc_id not in dense_doc_ids:
+                bm25_chunks.append(Document(page_content=texts[idx], metadata=meta))
 
-def retrieve(query: str, k: int = 2):
-    dense = vs.similarity_search(query, k=k)
-    with torch.no_grad():
-        pairs = [[query, d.page_content] for d in dense]
-        inp = rerank_tok(
-            pairs,
-            padding=True,
-            truncation=True,
-            return_tensors="pt",
-            max_length=512,
+        combined_results = list(dense_doc_ids.values()) + bm25_chunks
+
+        if len(combined_results) <= 2 * self.top_k_retrieval:
+            return combined_results
+        combined_results[:2 * self.top_k_retrieval]
+
+        return combined_results
+
+    
+    def rerank(self, docs):
+
+        rerank_tok = AutoTokenizer.from_pretrained('BAAI/bge-reranker-base')
+        if torch.backends.mps.is_available():
+            rerank_mod = AutoModelForSequenceClassification.\
+            from_pretrained('BAAI/bge-reranker-base', d_type='float32').to('mps')
+
+        elif torch.cuda.is_available():
+            rerank_mod = AutoModelForSequenceClassification.\
+                from_pretrained('BAAI/bge-reranker-base', torch_dtype='float32', device_map='auto')
+
+        else:
+            rerank_mod = AutoModelForSequenceClassification.from_pretrained('BAAI/bge-reranker-base').to('cpu')
+        rerank_mod.eval()
+
+
+        if len(docs) <= self.top_k_rerank:
+            return docs
+        
+        with torch.no_grad():
+            pairs = [[self.query, d.page_content] for d in docs]
+            inp = rerank_tok(
+                pairs,
+                padding = True,
+                truncation = True,
+                return_tensors = 'pt',
+                max_length = 512
+            )
+            inp = {k: v.to(rerank_mod.device) for k, v in inp.items()}
+            scores = rerank_mod(**inp).logits.view(-1).cpu().numpy()
+
+            return [docs[i] for i in np.argsort(scores)[::-1][:self.top_k_rerank]]
+
+
+
+class Generation:
+    def __init__(self, query, docs):
+        self.query = query
+        self.docs = docs
+        self.model = 'gpt-3.5-turbo'
+        self.temperature = 0.3
+        self.top_p = 0.85
+        self.max_tokens = 500
+        self.system_prompt =  """You are a helpful assistant that provides accurate answers based on the given context.
+        If the answer cannot be found in the context, say "I don't have enough information to answer this question.
+        Do not make up information. Base your answer solely on the provided context."""
+
+
+    def process_context(self):
+        content = ''
+        for i, doc in enumerate(self.docs):
+            metadata = doc.metadata
+            section = metadata.get('section', '')
+            sub_section = metadata.get('subsection', '')
+            header = f'{section}: {sub_section}' if section and sub_section else section or sub_section or ''
+            content += f"\n\n### Document {i+1}: {header}\n{doc.page_content}"
+
+        messages = [
+            {"role": "system", "content": self.system_prompt},
+            {"role": "user", "content": f"Context:\n{content}\n\nQuestion: {self.query}"}
+        ]
+        return messages
+    
+    def generate_answer(self):
+        openai.api_key = OPENAI_KEY
+
+        messages = self.process_context()
+        llm = openai.ChatCompletion.create(
+            model=self.model,
+            temperature=self.temperature,
+            max_tokens=self.max_tokens,
+            messages=messages
         )
-        inp = {k: v.to(rerank_mod.device) for k, v in inp.items()}
-        scores = rerank_mod(**inp).logits.view(-1).cpu().numpy()
-    return [dense[i] for i in np.argsort(scores)[::-1][:k]]
 
-def organize(docs, query):
-    sorted_docs = sorted(docs, key=lambda d: (
-        d.metadata.get("section", ""), 
-        d.metadata.get("sub_section", "")
-    ))
-    
-    return sorted_docs
+        return llm.choices[0].message.content
 
-def clean_unicode_spaces(text):
-    if text is None:
-        return None
-    return text.replace('\u202f', ' ')
-
-def build_prompt(question: str, docs):
-    organized_docs = organize(docs, question)
-    if not organized_docs:
-        return "I don't have enough information about this. Please contact the support staff for assistance.", []
-
-    ctx_blocks = []
-    for i, d in enumerate(organized_docs):
-        m = d.metadata
-        
-        section_title = clean_unicode_spaces(m.get('section_title', ''))
-        sub_title = clean_unicode_spaces(m.get('sub_title', ''))
-        
-        section = f"SECTION {m.get('section', 'N/A')}: {section_title}"
-        if m.get('sub_section'):
-            section += f"\nSUBSECTION {m['sub_section']}: {sub_title}"
-            
-        header = f"[CONTEXT BLOCK {i + 1}]\n{section}"
-        ctx_blocks.append(f"{header}\n\nCONTENT:\n{d.page_content.strip()}")
-
-    context = "\n\n" + "=" * 50 + "\n\n".join(ctx_blocks) + "\n\n" + "=" * 50 + "\n"
-
-    system_prompt = (
-        "You are a helpful assistant with access to an Attendance Improvement Plan (AIP) knowledge base.\n\n"
-        "When answering:\n"
-        "- Be extremely concise and direct.\n"
-        "- Only include information that directly answers the specific question asked.\n"
-        "- Avoid providing extra details, background information, or tangential points.\n"
-        "- Stick strictly to information found in the provided context.\n"
-        "- If the information needed isn't in the context, simply say so briefly.\n"
-        "- Format your response in short, simple sentences with minimal text."
-    )
-
-    prompt = f"{system_prompt}\n\nQUESTION:\n{question}\n\nCONTEXT:{context}\n\nANSWER:\n"
-    return prompt, organized_docs
-
-def generate_answer(question: str):
-    docs = retrieve(question)
-    
-    if not docs:
-        return "I don't have enough information about this. Please contact the support staff for assistance."
-    
-    prompt, organised_docs = build_prompt(question, docs)
-    
-    inp = llm_tok(prompt, return_tensors="pt")
-    if torch.cuda.is_available():
-        inp = {k: v.to(llm.device) for k, v in inp.items()}
-    
-    out = llm.generate(**inp, max_new_tokens=512, do_sample=False, temperature=0.15, top_p=0.9)
-    answer = llm_tok.decode(out[0][inp["input_ids"].shape[1]:], skip_special_tokens=True).strip()
-    
-    answer = re.sub(r'#QUESTION.*?#ANSWER', '', answer, flags=re.DOTALL)
-    answer = re.sub(r'#QUESTION|#ANSWER', '', answer)
-    
-    if not answer or "I don't have enough information" in answer:
-        return "I don't have enough information about this. Please contact the support staff for assistance."
-    
-    return answer
-
-def inspect_chunks(question: str):
-    docs = retrieve(question)
-    prompt, organized_docs = build_prompt(question, docs)
-    
-    serializable_docs = []
-    for doc in organized_docs:
-        serializable_doc = {
-            "content": doc.page_content,
-            "metadata": {}
-        }
-        for k, v in doc.metadata.items():
-            if isinstance(v, (str, int, float, bool, list)) or v is None:
-                if isinstance(v, str):
-                    v = clean_unicode_spaces(v)
-                serializable_doc["metadata"][k] = v
-            else:
-                serializable_doc["metadata"][k] = str(v)
-        serializable_docs.append(serializable_doc)
-    
-    original_docs = []
-    for doc in docs:
-        orig_doc = {
-            "content": doc.page_content,
-            "metadata": {}
-        }
-        for k, v in doc.metadata.items():
-            if isinstance(v, (str, int, float, bool, list)) or v is None:
-                if isinstance(v, str):
-                    v = clean_unicode_spaces(v)
-                orig_doc["metadata"][k] = v
-            else:
-                orig_doc["metadata"][k] = str(v)
-        original_docs.append(orig_doc)
-    
-    return {
-        "question": question,
-        "prompt": prompt,
-        "original_docs": original_docs,
-        "organized_docs": serializable_docs
-    }
-
-app = FastAPI()
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
-
-@app.post("/chat")
-def chat(r: Query):
-    return {"question": r.question, "answer": generate_answer(r.question)}
-
-@app.post("/inspect")
-def inspect(r: Query):
-    return {"inspection": inspect_chunks(r.question)}
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+query =  "What are the password requirements and how often should we create a new password?"
+retriever = Retrieve(query=query)
+docs = retriever.rerank(retriever.hybrid_retrieve())
+generator = Generation(docs=docs, query=query)
+print(generator.generate_answer())
