@@ -1,0 +1,286 @@
+1. Introduction  
+    1.1 About AIP  
+      The Attendance Improvement Plan (AIP) is an online system that helps New Mexico schools to create student  
+      attendance plan and create action plans to improve it.  
+      • Track attendance trends across all district schools  
+      • Plan district‑wide strategies to improve attendance  
+      • Monitor progress through reporting periods (80‑day, 120‑day, end‑of‑year)  
+
+    1.2 Your District Responsibilities  
+      ✔ Submit an annual district attendance improvement plan  
+      ✔ Set targets for all schools and student subgroups  
+      ✔ Monitor school plan implementation  
+      ✔ Update district progress after every reporting period  
+
+2. Getting Started  
+   2.1 How to Register  
+      1) Click "Register New Account"  
+      2) Fill Out:  
+         o First Name / Last Name  
+         o District Email (e.g., district.nm.gov; personal emails like Gmail are blocked).  
+         o District Name (select from dropdown).  
+         o Phone Number  
+         o Password Requirements:  
+            a. 12+ characters  
+            b. 1 uppercase, 1 number, 1 special character (!, @, #, etc.).  
+            c. Expires every 60 days.  
+         o Role: Select District Absence Coordinator.  
+      3) Submit: Your request will be approved by PED Absence Coordinator.  
+
+   2.2 Logging In  
+      1) Visit Application  
+      2) Enter Credentials:  
+         o Registered email  
+         o Password  
+      3) Two-Step Authentication:  
+         o A one‑time code (OTP) will be sent to your email. Enter it to proceed.  
+
+   2.3 First‑Time Setup  
+      • Landing Page: If you have multiple roles (e.g., School + District Coordinator), select your role.  
+      • Home Screen: Displays certified schools/districts for the fiscal year.  
+      • Announcements: Check for PED alerts (e.g., deadlines, policy updates).  
+
+
+3. Creating Your District Level Plan (Follow these 7 steps to complete your District Level Plan.)
+
+    3.1 District Contact Info
+
+        Purpose: Identify the primary district contact and team members.
+        Steps:
+        1) School Contact:
+            o Enter the contact person’s first name, last name, title, and email.
+            o Example:
+                LEA Name: BELEN CONSOLIDATED SCHOOLS
+                District Coordinator First Name: Kristin
+                District Coordinator Last Name: Garcia
+                District Coordinator Title: District Absence Coordinator
+                District Coordinator Email: garcia@tech.com
+
+        2) Save Progress – Click Save before navigating to the next tab.
+
+    3.2 Step 2 – School Improvement Targets
+
+        Purpose: Enable District Absence Coordinator to set and monitor attendance‑improvement targets for their district and subsequent schools.
+
+        How to Access:
+            Navigate to Home > [Your District] > School Improvement Targets
+
+    3.3 Step 3 – Subpopulation Improvement Targets for District Plan
+
+        Purpose: Identify attendance disparities across student groups to target interventions effectively.
+        
+        How to Access:
+            Navigate to Home > [Your District] > Subpopulation Improvement Targets
+
+        Two sections appear in Subpopulation Improvement Targets:
+            a) District Attendance Improvement Targets (Demographics)
+            b) District Grade Improvement Targets
+
+            A) Data Fields for District Attendance Improvement Targets:
+                • Subpopulation Name: Auto‑filled groups (e.g., Female, Economically‑Disadvantaged)
+                • Current Year Enrollment Number: Total students in subgroup (auto‑pulled)
+                • Historical Chronic Absence Rates: Historical chronic‑absence rates (read‑only)
+                • Current Year Attendance Improvement Target: Enter your Goal (%) to reduce chronic absence for each subgroup
+
+            B) Data Fields for District Grade Improvement Targets
+                • Subpopulation Grade Level: Pre‑K through 12th grade (auto‑filled)
+                • Current Year Enrollment Number: Total students per grade (auto‑pulled)
+                • Historical Chronic Absence Rates: Past chronic‑absence rates (read‑only)
+                • Current Year Attendance Improvement Target: Set Grade‑specific improvement goals
+
+    3.4 Step 4 – Tiers of Support for District Plan
+
+        Purpose: Develop targeted interventions based on chronic absence severity. Each tier corresponds to a student's absenteeism level and requires specific strategies.
+
+        1) Tier 1 (0 – 5 % absence) – Whole School Prevention
+            Focus: School‑wide programs to promote attendance for all students.
+            Steps to Complete:
+                A. Add Strategy
+                    o Select from predefined options (e.g., "Engaging School Climate," "Parent Outreach Programs" or Other).
+                    o Or Other Strategies
+                    o Example: "Monthly attendance reward assemblies."
+                B. Implementation Plan
+                    o Action Steps: List specific activities (e.g., "Host biweekly parent workshops").
+                    o Responsible Parties: Assign staff (e.g., "Counselor: Maria Garcia").
+                    o Resources Needed: Budget, materials (e.g., "$500 for incentive prizes").
+                    o Timeline: Set milestones (e.g., "Launch by October 15").
+
+        2) Tier 2 (5 – 10 % absence) – Individualized Prevention
+            Focus: Targeted support for students at risk of chronic absence.
+            Steps to Complete:
+                A. Add Strategy
+                    o Choose interventions (e.g., "Attendance Mentoring," "Check‑In/Check‑Out Systems").
+                    o Or Other Strategies
+                B. Implementation Plan
+                    o Action Steps: "Pair at‑risk students with peer mentors."
+                    o Responsible Parties: "Mentor Coordinator: John Doe."
+                    o Resources: "Training materials for mentors."
+                    o Timeline: "Match mentors by Week 3."
+
+        3) Tier 3 (10 – 20 % absence) – Early Intervention
+            Focus: Address emerging chronic absence with structured support.
+            Steps to Complete:
+                A. Add Strategy
+                    o Select options like "Family Resource Referrals" or "Academic Support Plans."
+                    o Or Other Strategies
+                B. Implementation Plan
+                    o Action Steps: "Schedule home visits for students missing > 15 %."
+                    o Responsible Parties: "Social Worker: Lee Chen."
+                    o Resources: "Transportation for home visits."
+                    o Timeline: "Complete visits by November 30."
+                
+        4) Tier 4 (20 %+ absence) – Intensive Support
+            Focus: High‑intensity interventions for severe chronic absence.
+            Steps to Complete:
+            A. Add Strategy
+                o Choose options like "Case Management" or "Community Agency Partnerships."
+                o Or Other Strategies
+            B. Implementation Plan
+                o Action Steps: "Coordinate with local clinics for health barriers."
+                o Responsible Parties: "Nurse: Sarah Kim."
+                o Resources: "Memorandum of Understanding with Clinic X."
+                o Timeline: "Sign MOU by September 1."
+
+    3.5 Step 5 – Final Submission for District Plan
+        Steps:
+            a) Review all entered data.
+            b) Check the certification box: "I confirm that my submission is complete and final."
+            c) Click Submit Plan.
+
+    3.6 Step 6 – Progress Updates for District Plan
+        Reporting Periods: 40‑day, 80‑day, 120‑day.
+        Steps:
+            a) Current chronic‑absence rates (Pulled from backend).
+            b) Reflect on strategy effectiveness.
+            c) Adjust targets for the next period.
+
+    3.7 Step 7 – Print Your District Plan
+        Options:
+            a) Full PDF Report: Includes all sections and charts.
+            b) Custom Reports: Select specific sections for sharing.
+        Steps to print:
+            a) Click Print Plan.
+            b) Select Full PDF Report to include all sections and charts or select Custom Report and tick only the sections you need.
+            c) Click Generate
+
+
+
+4. Creating Your School Level Plan  (Follow these 7 steps to complete your School Level Plan.)
+
+   4.1 Step 1 – Contact Information  
+      Purpose: Identify the primary contact for the attendance plan and add team members involved in the process.
+
+      Steps:
+         1) School Contact:
+            o Enter the contact person’s first name, last name, title, and email.
+            o Example:
+               LEA Name: BELEN CONSOLIDATED SCHOOLS  
+               School Name: BELEN HIGH  
+               Contact First Name: Kristin  
+               Contact Last Name: Garcia  
+               Contact Email: garcia@tech.com 
+
+         2) Save Progress – Click Save before navigating to the next tab.  
+
+   4.2 Step 2 – Subpopulation Improvement Targets  
+      Purpose: Identify attendance disparities across student groups to target interventions effectively.  
+      How to Access:  
+         1) Navigate to "Home > [Your School] > Subpopulation Improvement Targets".  
+         2) Two sections appear:  
+            a) Chronic Absence Data for Sub‑populations (Demographics)  
+            b) Chronic Absence Data for Grade Levels  
+
+      A. Data Fields for Chronic Absence for Sub‑population  
+         Subpopulation Name: Auto‑filled groups (e.g., Female, Economically‑Disadvantaged)  
+         Current Year Enrollment: Total students in subgroup (auto pulled from backend) 
+         Historical Rates: Historical chronic absence rates (grayed out; read-only) 
+         Current Year Target: Enter your goal (%) to reduce chronic absence for each subgroup
+
+      B. Data Fields for Chronic Absence for Grade Level
+         Grade Level: Pre-K through 12th grade (auto-filled)  
+         Current Year Enrollment: Total students per grade (auto-pulled)  
+         Historical Rates: Past chronic absence rates (read-only)  
+         Current Year Target: Set grade-specific improvement goals 
+
+   4.3 Step 3 – Root Cause Analysis  
+      Purpose: Document the underlying causes of chronic absenteeism using research and local data.
+
+      Sections to Complete:
+         1) National/Local Research: Describe trends (e.g., “Transportation barriers affect 30 % of students”).  
+         2) Supportive Factors: Existing resources (e.g., “Strong parent‑engagement programs”).  
+         3) Barriers: Challenges (e.g., “Transportation gaps”, “Language barriers”).  
+
+   4.4 Step 4 – Tiers of Support  
+      Purpose: Develop targeted interventions based on chronic absence severity. Each tier corresponds to a student's absenteeism level and requires specific strategies. 
+
+      1) Tier 1 (0 – 5 % absence): Whole‑school prevention  
+         - Steps to complete:  
+            a. Add Strategy  
+                  o Select from predefined options (e.g., "Engaging School Climate," "Parent Outreach Programs" or Other).  
+                  o Or Other Strategies  
+                  o Example: "Monthly attendance reward assemblies."  
+            b. Implementation Plan  
+                  o Action Steps: List specific activities (e.g., "Host biweekly parent workshops").  
+                  o Responsible Parties: Assign staff (e.g., "Counselor: Maria Garcia").  
+                  o Resources Needed: Budget, materials (e.g., "$500 for incentive prizes").  
+                  o Timeline: Set milestones (e.g., "Launch by October 15").  
+
+      2) Tier 2 (5 – 10 % absence) : Individualized support  
+         - Steps to complete:  
+            a. Add Strategy  
+                  o Choose interventions (e.g., "Attendance Mentoring," "Check‑In/Check‑Out Systems").  
+                  o Or Other Strategies  
+            b. Implementation Plan  
+                  o Action Steps: "Pair at‑risk students with peer mentors."  
+                  o Responsible Parties: "Mentor Coordinator: John Doe."  
+                  o Resources: "Training materials for mentors."  
+                  o Timeline: "Match mentors by Week 6."  
+
+      3) Tier 3 (10 – 20 % absence) : Early intervention  
+            - Steps to complete:  
+            a. Add Strategy  
+                  o Select options like "Family Resource Referrals" or "Academic Support Plans."  
+                  o Or Other Strategies  
+            b. Implementation Plan  
+                  o Action Steps: "Schedule home visits for students missing > 15 %."  
+                  o Responsible Parties: "Social Worker: Lee Chen."  
+                  o Resources: "Transportation for home visits."  
+                  o Timeline: "Complete visits by November 30."  
+
+      4) Tier 4 (20 %+ absence) : Intensive support  
+            - Steps to complete:  
+               a. Add Strategy  
+                  o Choose options like "Case Management" or "Community Agency Partnerships."  
+                  o Or Other Strategies  
+               b. Implementation Plan  
+                  o Action Steps: "Coordinate with local clinics for health barriers."  
+                  o Responsible Parties: "Nurse: Sarah Kim."  
+                  o Resources: "Memorandum of Understanding with Clinic X."  
+                  o Timeline: "Sign MOU by September 1."  
+
+   4.5 Step 5 – Final Submission of School Plan  
+      1) Review all entered data.  
+      2) Check the certification box: “I certify this plan is complete.”  
+      3) Click "Submit Plan".  
+      Note: Submitted plans can only be edited after PED/District review.  
+
+   4.6 Step 6 – Progress Updates  
+      Reporting Periods: 80‑day, 120‑day, end‑of‑year.  
+      Steps:  
+         1) Current chronic‑absence rates (pulled from backend).  
+         2) Reflect on strategy effectiveness.  
+         3) Adjust targets for the next period.  
+
+   4.7 Step 7 – Print Your Plan 
+      Options:
+         1) Full PDF Report: Includes all sections and charts.
+         2) Custom Reports: Select specific sections for sharing. 
+      Steps to print:  
+         1) Click "Print Plan".  
+         2) Select "Full PDF Report" to include all sections and charts or select "Custom Report" and tick only the sections you need.  
+         3) Click "Generate" 
+
+5. Support & Troubleshooting  
+   1) Login Problems – Verify OTP and credentials.  
+   2) Data Not Saving – Refresh the page and reconnect.  
+   3) Broken Screens – Contact IT support.  

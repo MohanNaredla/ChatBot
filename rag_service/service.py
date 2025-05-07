@@ -58,11 +58,6 @@ llm = AutoModelForCausalLM.from_pretrained(
 llm.eval()
 
 def retrieve(query: str, k: int = 2):
-    if 'tiers of support' in query.lower():
-        results = vs.similarity_search('Step\u202f4\u202f–\u202fTiers\u202fof\u202fSupport', k=1)
-        if results:
-            return results[0]
-    
     dense = vs.similarity_search(query, k=k)
     with torch.no_grad():
         pairs = [[query, d.page_content] for d in dense]
