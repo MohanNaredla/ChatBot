@@ -1,11 +1,5 @@
 import os
-import string
-import re
-import difflib
-import sys
-from collections import defaultdict
-import json
-from datetime import time
+from Data import Data
 
 from pydantic import BaseModel
 import uvicorn
@@ -21,27 +15,35 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 
 
 load_dotenv()
 OPENAI_KEY = os.getenv('OPENAI_API_KEY')
 
 
+app = FastAPI()
+app.add_middleware(
+    CORSMiddleware, 
+    allow_origins = ["*"], 
+    allow_headers = ["*"], 
+    allow_methods = ["*"]
+    )
+
+
 class Retrieve:
     def __init__(self, query):
+        data = Data()
+        self.faiss_dir = data.faiss_dir
+        self.bm25_dir = data.bm25_dir
         self.top_k_retrieval = 8
         self.top_k_rerank = 4
-        self.vs_path = 'data/index/faiss'
-        self.bm_path = 'data/index/bm25.pkl'
         self.query = query
         
     
     def hybrid_retrieve(self):
         emb = SentenceTransformerEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
-        vs = FAISS.load_local(self.vs_path, emb, allow_dangerous_deserialization=True)
-        with open(self.bm_path, 'rb') as f:
+        vs = FAISS.load_local(self.faiss_dir, emb, allow_dangerous_deserialization=True)
+        with open(self.bm25_dir, 'rb') as f:
             bm25, texts, metas = pickle.load(f)
 
         dense_docs = vs.similarity_search(self.query, self.top_k_retrieval)
@@ -108,8 +110,7 @@ class Generation:
         self.query = query
         self.docs = docs
         self.model = 'gpt-3.5-turbo'
-        self.temperature = 0.3
-        self.top_p = 0.85
+        self.temperature = 0.5
         self.max_tokens = 500
         self.system_prompt =  """You are a helpful assistant that provides accurate answers based on the given context.
         If the answer cannot be found in the context, say "I don't have enough information to answer this question.
@@ -144,8 +145,23 @@ class Generation:
 
         return llm.choices[0].message.content
 
-query =  "What are the password requirements and how often should we create a new password?"
-retriever = Retrieve(query=query)
-docs = retriever.rerank(retriever.hybrid_retrieve())
-generator = Generation(docs=docs, query=query)
-print(generator.generate_answer())
+
+
+class Query(BaseModel):
+    question: str
+
+
+
+@app.post('/chat')
+async def ask_question(request: Query):
+    retriever = Retrieve(query=request.question)
+    retrieved_docs = retriever.rerank(retriever.hybrid_retrieve())
+    generator = Generation(query=request.question, docs=retrieved_docs)
+    answer = generator.generate_answer()
+
+    return {'question': request.question, 'answer': answer}
+
+
+if __name__ == '__main__':
+    uvicorn.run(app, host='127.0.0.1', port=8000)
+   

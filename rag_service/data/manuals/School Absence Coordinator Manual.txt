@@ -3,7 +3,7 @@
       The Attendance Improvement Plan (AIP) is an online system that helps New Mexico schools create student attendance plans and action steps to improve them.  
       • Track student‑attendance trends across schools.  
       • Plan evidence‑based strategies to improve attendance.  
-      • Monitor progress through reporting periods (80‑day, 120‑day, and end‑of‑year).  
+      • Monitor progress through reporting periods.
 
    1.2 Your Responsibilities as School Absence Coordinator  
       ✔ Submit an annual attendance‑improvement plan for your school.  

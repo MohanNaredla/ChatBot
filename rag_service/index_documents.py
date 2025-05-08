@@ -1,16 +1,21 @@
 import os
 import re 
-import pickle 
+import pickle
+import Data
 
 from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from rank_bm25 import BM25Okapi
 
-class Embedding:
+class Embedding():
     def __init__(self):
-        self.role = 'District Absence Coordinator'
-        self.data_path = f'data/manuals/{self.role} Manual.txt'
+        data = Data.Data()
+        self.role = data.role
+        self.data_path = data.data_path
+        self.faiss_dir = data.faiss_dir
+        self.bm25_dir = data.bm25_dir
+        self.index_dir = f'data/index{self.role.split(' ')[0]}'
 
         
     def read_data(self) -> list:
@@ -127,25 +132,21 @@ class Embedding:
             )
             docs.append(doc)
             
-        os.makedirs('data/index', exist_ok=True)
+        os.makedirs(self.index_dir, exist_ok=True)
         embeddings = SentenceTransformerEmbeddings(
             model_name = 'sentence-transformers/all-MiniLM-L6-v2'
         )
         vs = FAISS.from_documents(docs, embeddings)
-        vs.save_local('data/index/faiss')
+        vs.save_local(self.faiss_dir)
         
         texts = [doc.page_content for doc in docs]
         tokenized_texts = [text.split() for text in texts]
         bm_25 = BM25Okapi(tokenized_texts)
         meta = [doc.metadata for doc in docs]
     
-        with open("data/index/bm25.pkl", "wb") as f:
+        with open(self.bm25_dir, "wb") as f:
             pickle.dump((bm_25, texts, meta), f)
     
     
 obj = Embedding()
 obj.build_vector_database()
-
-with open("data/index/chunks_with_metadata.txt", "w", encoding="utf-8") as f:
-    for chunk in obj.process_chunks():
-        f.write(f"{chunk['metadata']}\n{chunk['content']}\n{'='*113}\n")

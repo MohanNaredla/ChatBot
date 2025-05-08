@@ -1,80 +1,147 @@
-1. Introduction  
-    1.1 About AIP  
-      The Attendance Improvement Plan (AIP) is an online system that helps New Mexico schools to create student  
-      attendance plan and create action plans to improve it.  
-      • Track attendance trends across all district schools.  
-      • Plan district‑wide strategies to improve attendance.  
-      • Monitor progress through reporting periods.
+1. Introduction
+1.1 About AIP
+        The Attendance Improvement Plan (AIP) is an online system that helps New Mexico schools to create student attendance plans and create action plans to improve it.
+        • Track attendance trends across all district schools
+        • Plan district‑wide strategies to improve attendance
+        • Monitor progress through reporting periods
+ 
+    1.2 Roles and Responsibilities of a PED Viewer
+        a) View Attendance Improvement Plans (AIPs)
+        b) View, analyze, and generate reports
+        c) View Announcements
+        d) Monitor Attendance Initiatives (View only)
 
-    1.2 Your District Responsibilities  
-      ✔ Submit an annual district attendance improvement plan  
-      ✔ Set targets for all schools and student subgroups  
-      ✔ Monitor school plan implementation  
-      ✔ Update district progress after every reporting period  
+    1.3 Roles and Responsibilities of a PED Absence Coordinator
+        a) View and Edit Attendance Improvement Plans (AIPs)
+        b) Approve/Reject User Requests (Can approve/reject registrations)
+        c) View, analyze, and generate reports
+        d) Create, edit, delete announcements
+        e) User Account Management (Full control: edit roles, deactivate users, reset passwords)
+        f) Monitor Attendance Initiatives (State-wide tracking & support)
 
-2. Getting Started  
-   2.1 How to Register  
-      1) Click "Register New Account"  
-      2) Fill Out:  
-         o First Name / Last Name  
-         o District Email (e.g., district.nm.gov; personal emails like Gmail are blocked).  
-         o District Name (select from dropdown).  
-         o Phone Number  
-         o Password Requirements:  
-            a. 12+ characters  
-            b. 1 uppercase, 1 number, 1 special character (!, @, #, etc.).  
-            c. Expires every 60 days.  
-         o Role: Select District Absence Coordinator.  
-      3) Submit: Your request will be approved by PED Absence Coordinator.  
-
-   2.2 Logging In  
-      1) Visit Application  
-      2) Enter Credentials:  
-         o Registered email  
-         o Password  
-      3) Two-Step Authentication:  
-         o A one‑time code (OTP) will be sent to your email. Enter it to proceed.  
-
-   2.3 First‑Time Setup  
-      • Landing Page: If you have multiple roles (e.g., School + District Coordinator), select your role.  
-      • Home Screen: Displays certified schools/districts for the fiscal year.  
-      • Announcements: Check for PED alerts (e.g., deadlines, policy updates).  
+    1.4 Roles and Responsibilities of a IT Administrator
+        a) View and Edit Attendance Improvement Plans (AIPs)
+        b) Approve/Reject User Requests (Can approve/reject registrations)
+        c) View, analyze, and generate reports
+        d) Create, edit, delete announcements
+        e) User Account Management (Full control: edit roles, deactivate users, reset passwords)
+        f) IT Panel Access
+        g) Create/Configure School Years
+        h) Set School Year Status (Active/Inactive)
+        i) Refresh STARS Snapshot Data
+        j) Monitor Attendance Initiatives (View only)
 
 
-3. Creating Your District Level Plan (Follow these 7 steps to complete your District Level Plan.)
-
-   3.1 Overview of Steps to follow and Information to collect to create a district plan
-
-      1) District Contact Info
-         Purpose: Identify primary district contact and team members
-         Collect: LEA name, district coordinator's name, title, and email
-
-
-      2) School Improvement Targets
-         Purpose: Set and monitor attendance improvement targets for district and schools
-
-      3) Subpopulation Improvement Targets
-         Purpose: Identify attendance disparities to target interventions
-         Collect: Target percentages for each demographic subgroup and grade level
-
-      4) Tiers of Support
-         Purpose: Develop targeted interventions based on absence severity
-         Collect: Strategies, action steps, responsible parties, resources, and timelines for each tier
-
-      5) Final Submission
-         Purpose: Complete and certify the plan
-
-      6) Progress Updates
-         Purpose: Monitor implementation at 40-day, 80-day, and 120-day intervals
-         Collect: Effectiveness reflections and adjusted targets
-
-      7) Print District Plan
-         Purpose: Generate reports for sharing
-
-      You can find the detailed process for each step in the following subsections.
+2. Getting Started
+    2.1 How to Register
+        1) Click "Register New Account"
+        2) Fill Out:
+            o First Name / Last Name
+            o School/District Email (e.g., district.nm.gov; personal emails like Gmail are blocked)
+            o School/District Name (select from dropdown)
+            o Phone Number
+            o Password Requirements:
+                a. 12+ characters
+                b. 1 uppercase, 1 number, 1 special character (!, @, #, etc.)
+                c. Expires every 60 days
+            o Role: Select School/District Absence Coordinator
+        ✔ Note: Only School/District Absence Coordinators can register.
+        ✔ After a PED Absence Coordinator approves your account, they will assign your specific role (e.g., PED Viewer, IT Admin) via the Manage Users screen.
+    2.2 Logging In
+        1) Visit Application
+        2) Enter Credentials:
+            o Registered email
+            o Password
+        3) Two-Step Authentication:
+            o A one-time code (OTP) will be sent to your email. Enter it to proceed.
+    2.3 First-Time Setup
+        • Landing Page: If you have multiple roles (e.g., School + District Coordinator), select your role.
+        • Home Screen: Displays certified schools/districts for the fiscal year.
+        • Announcements: Check for PED alerts (e.g., deadlines, policy updates).
 
 
-    3.2 District Contact Info
+3. PED Viewer
+    3.1 District and School Plans
+        Purpose: PED Viewer can view the attendance improvement plans for schools and districts.
+        ✔ Note: PED Viewers have view-only access.
+        How to Access:
+        Navigate to: Home > Select the [School/District] from the dropdown > Click
+    3.2 Announcements
+        Purpose: Search and view the announcements created by the PED Absence Coordinator.
+        How to Access:
+         Navigate to: Home > [Announcements]
+
+    3.3 Reports
+        Purpose: The PED Viewer has read-only access to attendance reports to monitor and analyze trends in district-wide and school-level attendance data.
+        Types of Reports:
+        • Contact Information Report
+        • Attendance Plan Submitted Report
+        • Missing Strategy Information Report
+        How to Access:
+        Navigate to: Home > [Reports]
+
+
+4. PED Absence Coordinator
+    4.1 District and School Plans
+        Purpose: The PED Absence Coordinator oversees and supports the implementation of Attendance Improvement Plans (AIPs) to:
+        • Ensure Compliance: Verify that all district and school plans meet state attendance guidelines.
+        • Identify Systemic Issues : Analyze trends and root causes of chronic absenteeism across multiple schools/districts.
+        • Facilitate Interventions: Guide schools in refining strategies (Tiers 1–4) based on comparative data.
+        • Drive Accountability: Track progress after every reporting cycle and adjust district-wide targets as needed.
+        • Promote Best Practices: Share successful interventions across schools/districts.
+        How to Access:
+        Navigate to: Home > [School/District]
+
+    4.2 Approve/Reject Users
+        Purpose: The PED Absence Coordinator manages user access to:
+        • Ensure Data Security: Grant permissions only to authorized personnel to protect sensitive data.
+        • Maintain Accountability: Verify that user roles match their responsibilities, avoiding unauthorized changes to attendance plans.
+        How to Access:
+        Navigate to: Home > [Approve/Reject Users]
+
+    4.3 Manage Users
+        Purpose: The PED Absence Coordinator handles user account management in order to:
+        ✔ Maintain Accurate User Data
+            • Update contact details (name, email, phone) for accurate communication.
+            • Assign users to appropriate districts/schools
+        ✔ Control System Access & Permissions
+            • Assign, modify, or revoke roles (e.g., school staff vs district admin) to enforce role-based security.
+            •  Deactivate accounts for inactive users or role changes to prevent unauthorized access.
+        ✔ Support User Productivity
+            • Initiate passwords Reset to resolve login issues.
+            • Correct errors in user profiles to prevent workflow disruptions.
+        ✔ Ensure Compliance & Security
+            • Align access with district/state policy.
+            • Mitigate risks by promptly disabling accounts for departing employees.
+        How to Access:
+        Navigate to: Home > Admin > Manage Users
+
+    4.4 Reports
+        Purpose: The Reports section provides insights to help the PED Absence Coordinator:
+        ✔ Maintain Accurate Contact Information : Access the Contact Information Report to verify and update school/district personnel details, ensuring proper communication channels for attendance interventions.
+        ✔Monitor Compliance & Completion:  Review the Attendance Plan Submission Report to track which schools/districts have submitted required improvement plans and identify non-compliant institutions.
+        ✔ Identify Gaps in Intervention Strategies : Analyze the Missing Strategies Information Report to detect schools lacking tiered intervention plans (Tiers 1–4) and provide targeted support.
+        How to Access:
+        Navigate to: Home > [Reports]
+
+
+5. IT Administrator
+    5.1 IT Panel
+        Purpose:
+        • Configure Academic Cycles
+            o Create/Edit School Years : Set up new academic terms and align them with reporting requirements. 
+            o *Set Reporting Periods: Define active intervals for attendance tracking (e.g., every reporting period/semester cycles).
+        • Synchronize Data Systems
+            o Refresh STARS Snapshots: Sync attendance data with state databases to ensure accuracy. 
+            o Update School Year Status: Mark years as active/archived to control data submission windows. 
+            o  Set Maintenance Messages: Notify users of scheduled downtime or system updates to minimize disruptions and set clear expectations.
+        How to Access:
+        Navigate to: Home > Admin > IT Panel
+
+
+6. Creating Your District Level Plan (Follow these 7 steps to complete your District Level Plan.)
+
+    6.1 District Contact Info
 
         Purpose: Identify the primary district contact and team members.
         Steps:
@@ -89,14 +156,14 @@
 
         2) Save Progress – Click Save before navigating to the next tab.
 
-    3.3 Step 2 – School Improvement Targets
+    6.2 Step 2 – School Improvement Targets
 
         Purpose: Enable District Absence Coordinator to set and monitor attendance‑improvement targets for their district and subsequent schools.
 
         How to Access:
             Navigate to Home > [Your District] > School Improvement Targets
 
-    3.4 Step 3 – Subpopulation Improvement Targets for District Plan
+    6.3 Step 3 – Subpopulation Improvement Targets for District Plan
 
         Purpose: Identify attendance disparities across student groups to target interventions effectively.
         
@@ -119,7 +186,7 @@
                 • Historical Chronic Absence Rates: Past chronic‑absence rates (read‑only)
                 • Current Year Attendance Improvement Target: Set Grade‑specific improvement goals
 
-    3.5 Step 4 – Tiers of Support for District Plan
+    6.4 Step 4 – Tiers of Support for District Plan
 
         Purpose: Develop targeted interventions based on chronic absence severity. Each tier corresponds to a student's absenteeism level and requires specific strategies.
 
@@ -172,20 +239,20 @@
                 o Resources: "Memorandum of Understanding with Clinic X."
                 o Timeline: "Sign MOU by September 1."
 
-    3.6 Step 5 – Final Submission for District Plan
+    6.5 Step 5 – Final Submission for District Plan
         Steps:
             a) Review all entered data.
             b) Check the certification box: "I confirm that my submission is complete and final."
             c) Click Submit Plan.
 
-    3.7 Step 6 – Progress Updates for District Plan
+    6.6 Step 6 – Progress Updates for District Plan
         Reporting Periods: 40‑day, 80‑day, 120‑day.
         Steps:
             a) Current chronic‑absence rates (Pulled from backend).
             b) Reflect on strategy effectiveness.
             c) Adjust targets for the next period.
 
-    3.8 Step 7 – Print Your District Plan
+    6.7 Step 7 – Print Your District Plan
         Options:
             a) Full PDF Report: Includes all sections and charts.
             b) Custom Reports: Select specific sections for sharing.
@@ -195,46 +262,9 @@
             c) Click Generate
 
 
+7. Creating Your School Level Plan  (Follow these 7 steps to complete your School Level Plan.)
 
-4. Creating Your School Level Plan (Follow these 7 steps to complete your School Level Plan.)
-
-   4.1 Overview of Steps to follow and Information to collect to create a School Plan
-   
-      1) Contact Information
-         Purpose: Identify primary contact and team members
-         Collect: LEA name, school name, contact's name, title, and email
-
-
-      2) Subpopulation Improvement Targets
-         Purpose: Identify attendance disparities to target interventions
-         Collect: Target percentages for each demographic subgroup and grade level
-
-
-      3) Root Cause Analysis
-         Purpose: Document underlying causes of chronic absenteeism
-         Collect: Research findings, supportive factors, and barriers
-
-
-      4) Tiers of Support
-         Purpose: Develop targeted interventions based on absence severity
-         Collect: Strategies, action steps, responsible parties, resources, and timelines for each tier
-
-
-      5) Final Submission
-         Purpose: Complete and certify the plan
-
-
-      6) Progress Updates
-         Purpose: Monitor implementation at 80-day, 120-day, and end-of-year
-         Collect: Effectiveness reflections and adjusted targets
-
-
-      7) Print Plan
-         Purpose: Generate reports for sharing
-
-      You can find the detailed process for each step in the following subsections.
-
-   4.2 Step 1 – Contact Information  
+   7.1 Step 1 – Contact Information  
       Purpose: Identify the primary contact for the attendance plan and add team members involved in the process.
 
       Steps:
@@ -249,7 +279,7 @@
 
          2) Save Progress – Click Save before navigating to the next tab.  
 
-   4.3 Step 2 – Subpopulation Improvement Targets  
+   7.2 Step 2 – Subpopulation Improvement Targets  
       Purpose: Identify attendance disparities across student groups to target interventions effectively.  
       How to Access:  
          1) Navigate to "Home > [Your School] > Subpopulation Improvement Targets".  
@@ -269,7 +299,7 @@
          Historical Rates: Past chronic absence rates (read-only)  
          Current Year Target: Set grade-specific improvement goals 
 
-   4.4 Step 3 – Root Cause Analysis  
+   7.3 Step 3 – Root Cause Analysis  
       Purpose: Document the underlying causes of chronic absenteeism using research and local data.
 
       Sections to Complete:
@@ -277,7 +307,7 @@
          2) Supportive Factors: Existing resources (e.g., “Strong parent‑engagement programs”).  
          3) Barriers: Challenges (e.g., “Transportation gaps”, “Language barriers”).  
 
-   4.5 Step 4 – Tiers of Support  
+   7.4 Step 4 – Tiers of Support  
       Purpose: Develop targeted interventions based on chronic absence severity. Each tier corresponds to a student's absenteeism level and requires specific strategies. 
 
       1) Tier 1 (0 – 5 % absence): Whole‑school prevention  
@@ -325,20 +355,20 @@
                   o Resources: "Memorandum of Understanding with Clinic X."  
                   o Timeline: "Sign MOU by September 1."  
 
-   4.6 Step 5 – Final Submission of School Plan  
+   7.5 Step 5 – Final Submission of School Plan  
       1) Review all entered data.  
       2) Check the certification box: “I certify this plan is complete.”  
       3) Click "Submit Plan".  
       Note: Submitted plans can only be edited after PED/District review.  
 
-   4.7 Step 6 – Progress Updates  
+   7.6 Step 6 – Progress Updates  
       Reporting Periods: 80‑day, 120‑day, end‑of‑year.  
       Steps:  
          1) Current chronic‑absence rates (pulled from backend).  
          2) Reflect on strategy effectiveness.  
          3) Adjust targets for the next period.  
 
-   4.8 Step 7 – Print Your Plan 
+   7.7 Step 7 – Print Your Plan 
       Options:
          1) Full PDF Report: Includes all sections and charts.
          2) Custom Reports: Select specific sections for sharing. 
@@ -347,7 +377,7 @@
          2) Select "Full PDF Report" to include all sections and charts or select "Custom Report" and tick only the sections you need.  
          3) Click "Generate" 
 
-5. Support & Troubleshooting  
+8. Support & Troubleshooting  
    1) Login Problems – Verify OTP and credentials.  
    2) Data Not Saving – Refresh the page and reconnect.  
    3) Broken Screens – Contact IT support.  
