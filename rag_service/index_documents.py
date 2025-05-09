@@ -1,7 +1,7 @@
 import os
 import re 
 import pickle
-import Data
+from data import Data
 
 from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
@@ -10,7 +10,7 @@ from rank_bm25 import BM25Okapi
 
 class Embedding():
     def __init__(self):
-        data = Data.Data()
+        data = Data()
         self.role = data.role
         self.data_path = data.data_path
         self.faiss_dir = data.faiss_dir
