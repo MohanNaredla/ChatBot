@@ -1,5 +1,5 @@
 import os
-from data import Data
+from Data import Data
 
 from typing import List, Dict, Optional
 from pydantic import BaseModel

@@ -132,7 +132,7 @@ rogue==0.0.2
 rpds-py==0.24.0
 rsa==4.9.1
 safetensors==0.5.3
-scikit-learn==1.6.1
+scikit-learn==1.6.1 
 scipy==1.15.2
 sentence-transformers==4.1.0
 setuptools==79.0.0
@@ -165,3 +165,4 @@ wrapt==1.17.2
 yarl==1.20.0
 zipp==3.21.0
 zstandard==0.23.0
+tiktoken
