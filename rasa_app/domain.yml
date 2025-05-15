@@ -22,8 +22,6 @@ responses:
     - text: "Bye for now. I'm here if you need more help with AIP."
     - text: "Thanks for chatting! Come back anytime you need assistance with the Attendance Improvement Plan."
     - text: "Have a great day! I'll be here when you need more help with AIP."
-    - text: "Until next time! Remember, I'm always here to answer your AIP questions."
-    - text: "Farewell! Don't hesitate to return if you need more information about the Attendance Improvement Plan system."
 
   utter_thank:
     - text: "You're welcome!"

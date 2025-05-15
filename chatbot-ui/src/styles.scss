@@ -1,14 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --clr-teal-900: #03787c;
+  --clr-teal-700: #02686c;
+  --clr-teal-600: #308686;
+  --clr-teal-500: #5fa5a0;
+  --clr-teal-300: #92c9c5;
+  --clr-teal-350: #7fb7b3;
+  --clr-teal-100: #c2d7d7;
+  --clr-teal-75: #dbeaea;
+  --clr-teal-050: #f4f8f8;
+  --clr-border: #d8e6e6;
 
-/* Reset and global styles */
+  --clr-text-light: #ffffff;
+  --clr-text-dark: #1f1f1f;
+  --clr-error: #d9534f;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   overflow: hidden;

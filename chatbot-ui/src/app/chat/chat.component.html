@@ -1,36 +1,75 @@
-<div class="chat-container">
+<div class="chat-container" [class.expanded]="expanded">
   <div class="chat-header">
-    <h1>AI Assistant</h1>
-    <button class="close-button" (click)="closeChat()">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
+    <h1 class="chat-header-title">AIP Assistant</h1>
+    <div class="header-actions">
+      <button class="expand-button" (click)="toggleExpand()">
+        <svg
+          *ngIf="!expanded"
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <polyline points="9 21 3 21 3 15"></polyline>
+          <line x1="21" y1="3" x2="14" y2="10"></line>
+          <line x1="3" y1="21" x2="10" y2="14"></line>
+        </svg>
+        <svg
+          *ngIf="expanded"
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <polyline points="9 21 3 21 3 15"></polyline>
+          <line x1="21" y1="3" x2="14" y2="10"></line>
+          <line x1="3" y1="21" x2="10" y2="14"></line>
+        </svg>
+      </button>
+
+      <button class="close-button" (click)="closeChat()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </div>
 
   <div class="messages-container" #chatContainer>
     <div
-      *ngFor="let message of messages"
+      *ngFor="let m of messages"
       class="message"
       [ngClass]="{
-        'user-message': message.sender === 'user',
-        'bot-message': message.sender === 'bot'
+        'user-message': m.sender === 'user',
+        'bot-message': m.sender === 'bot'
       }"
     >
       <div class="message-content">
-        <div class="message-text">{{ message.content }}</div>
-        <div class="message-time">{{ formatTimestamp(message.timestamp) }}</div>
+        <div class="message-text">{{ m.content }}</div>
+        <div class="message-time">{{ formatTimestamp(m.timestamp) }}</div>
       </div>
     </div>
 
@@ -38,9 +77,7 @@
       <div class="message-content">
         <div class="message-text">
           <div class="typing-indicator">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
           </div>
         </div>
       </div>
@@ -51,7 +88,7 @@
     <input
       type="text"
       [(ngModel)]="userMessage"
-      placeholder="Type your message here..."
+      placeholder="Type a message…"
       (keyup.enter)="sendMessage()"
       [disabled]="loading"
     />
@@ -61,18 +98,20 @@
       [ngClass]="{ disabled: !userMessage.trim() || loading }"
     >
       <svg
+        role="img"
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
         width="24"
         height="24"
-        viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
+        focusable="false"
+        aria-label="Send"
       >
-        <line x1="22" y1="2" x2="11" y2="13"></line>
-        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        <path d="M12 5v14m6-8l-6-6m-6 6l6-6" />
       </svg>
     </button>
   </div>

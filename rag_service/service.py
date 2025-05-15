@@ -1,5 +1,5 @@
 import os
-from Data import Data
+from data import Data
 
 from typing import List, Dict, Optional
 from pydantic import BaseModel
@@ -113,8 +113,8 @@ class Generation:
         self.conversation_context = conversation_context or []
         self.model = 'gpt-3.5-turbo'
         self.temperature = 0.35
-        self.max_tokens = 500
-        self.max_context_tokens = 700
+        self.max_tokens = 700
+        self.max_context_tokens = 900
         self.token_counter = TokenCounter(self.model)
         self.system_prompt = """
         You are a helpful assistant that provides accurate answers based on the given context.

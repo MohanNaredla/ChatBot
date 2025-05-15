@@ -6,6 +6,7 @@ import {
   AfterViewChecked,
   Output,
   EventEmitter,
+  Input,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -20,12 +21,15 @@ import { Message } from '../models/chat.model';
   styleUrl: './chat.component.scss',
 })
 export class ChatComponent implements OnInit, AfterViewChecked {
+  @Input() expanded = false;
+  @Output() expand = new EventEmitter<boolean>();
+  @Output() close = new EventEmitter<void>();
+  @ViewChild('chatContainer') private chatContainer!: ElementRef;
+
   userMessage = '';
   messages: Message[] = [];
   loading = false;
   backendUnavailable = false;
-  @ViewChild('chatContainer') private chatContainer!: ElementRef;
-  @Output() close = new EventEmitter<void>();
 
   constructor(private chatService: ChatService) {}
 
@@ -44,12 +48,8 @@ export class ChatComponent implements OnInit, AfterViewChecked {
 
   checkBackendAvailability(): void {
     fetch('http://localhost:5005/version')
-      .then(() => {
-        this.backendUnavailable = false;
-      })
-      .catch(() => {
-        this.backendUnavailable = true;
-      });
+      .then(() => (this.backendUnavailable = false))
+      .catch(() => (this.backendUnavailable = true));
   }
 
   ngAfterViewChecked(): void {
@@ -61,10 +61,10 @@ export class ChatComponent implements OnInit, AfterViewChecked {
 
   sendMessage(): void {
     if (!this.userMessage.trim() || this.loading) return;
-    const message = this.userMessage.trim();
+    const text = this.userMessage.trim();
     this.userMessage = '';
     this.loading = true;
-    this.chatService.sendMessage(message).subscribe({
+    this.chatService.sendMessage(text).subscribe({
       next: () => {
         this.messages = this.chatService.getMessages();
         this.loading = false;
@@ -80,7 +80,11 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     this.close.emit();
   }
 
-  formatTimestamp(date: Date): string {
-    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  toggleExpand(): void {
+    this.expand.emit(!this.expanded);
+  }
+
+  formatTimestamp(d: Date): string {
+    return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   }
 }

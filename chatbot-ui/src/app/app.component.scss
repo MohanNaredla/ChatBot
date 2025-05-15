@@ -1,3 +1,14 @@
+@keyframes rotateIn {
+  from {
+    transform: rotate(-90deg) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
 .main-content {
   padding: 40px;
   text-align: center;
@@ -6,17 +17,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
-    color: #333;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    color: #666;
-  }
+}
+.main-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+.main-content p {
+  font-size: 1.2rem;
+  color: #666;
 }
 
 .chat-assistant {
@@ -27,31 +36,31 @@
 }
 
 .chat-button {
+  margin-bottom: 10px;
+  margin-left: 4px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #007bff;
+  background-color: var(--clr-teal-700);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  
-  svg {
-    color: white;
-    width: 28px;
-    height: 28px;
-  }
-  
-  &:hover {
-    transform: scale(1.05);
-    background-color: #0069d9;
-  }
-  
-  &.active {
-    background-color: #dc3545;
-  }
+  animation: rotateIn 0.4s cubic-bezier(0.25, 0.8, 0.5, 1) both;
+}
+.chat-button svg {
+  color: #fff;
+  width: 28px;
+  height: 28px;
+}
+.chat-button:hover {
+  transform: scale(1.05);
+  background-color: var(--clr-teal-700);
+}
+.chat-button.active {
+  background-color: var(--clr-teal-700);
 }
 
 .chat-window {
@@ -63,14 +72,23 @@
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  display: none;
-  transition: all 0.3s ease;
-  transform: translateY(20px);
   opacity: 0;
-  
-  &.open {
-    display: block;
-    transform: translateY(0);
-    opacity: 1;
-  }
+  transform: translateY(40px) scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), width 0.3s ease,
+    height 0.3s ease;
+}
+
+.chat-window.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.chat-window.expanded {
+  width: 50vw;
+  height: 80vh;
+  right: 0;
+  bottom: 0;
 }

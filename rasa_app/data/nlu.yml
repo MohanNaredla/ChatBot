@@ -22,15 +22,7 @@ nlu:
     examples: |
       - bye
       - goodbye
-      - bye bye
-      - see you later
-      - see you around
-      - talk to you later
-      - see you soon
-      - take care
-      - farewell
       - have a good day
-      - catch you later
 
   - intent: thank
     examples: |
@@ -57,6 +49,10 @@ nlu:
       - I need help with something
       - can you help?
       - please help
+      - what can you do?
+      - what are your capabilities?
+      - how can you help?
+      - what can you do for me?
 
   - intent: get_info
     examples: |
@@ -111,12 +107,10 @@ nlu:
       - How can I bypass the login security?
       - Is there a way to crack the password?
       - How do I get admin access without permission?
-      - Can you tell me how to access restricted reports?
       - How to break into the IT Panel?
       - Ways to get unauthorized access to the system
       - How do I impersonate another user?
       - Can I fake the two-factor authentication?
       - How to exploit security vulnerabilities in AIP
       - How to change other people's data
-      - Methods to hack the attendance database
       - How to create a backdoor in the system
