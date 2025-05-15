@@ -8,7 +8,7 @@ import { ChatComponent } from './chat/chat.component';
   standalone: true,
   imports: [RouterOutlet, CommonModule, ChatComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'chatbot-ui';
@@ -16,5 +16,9 @@ export class AppComponent {
 
   toggleChat(): void {
     this.isChatOpen = !this.isChatOpen;
+  }
+
+  handleCloseChat(): void {
+    this.isChatOpen = false;
   }
 }
