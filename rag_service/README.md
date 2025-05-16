@@ -17,7 +17,7 @@ The `rag_service` module is a backend AI service. It serves as a user interface 
     ```bash
     py -3.13 -m  venv venv
     source venv/bin/activate # For macOS/Linux
-    venv\Scripts\activate # For Windows
+    .\venv\Scripts\activate # For Windows
     ```
 3. Install the required dependencies:
     ```bash
