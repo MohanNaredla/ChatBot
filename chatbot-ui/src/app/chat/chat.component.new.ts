@@ -31,10 +31,7 @@ export class ChatComponent implements OnInit, AfterViewChecked, OnDestroy {
   messages: Message[] = [];
   loading = false;
   backendUnavailable = false;
-  
-  // UI state for speech recognition
   isListening = false;
-  inputPlaceholder = 'Type a message…';
 
   constructor(private chatService: ChatService) {}
 
@@ -49,7 +46,7 @@ export class ChatComponent implements OnInit, AfterViewChecked, OnDestroy {
       this.messages = this.chatService.getMessages();
     }
     this.checkBackendAvailability();
-  }  
+  }
 
   checkBackendAvailability(): void {
     // Check Rasa backend
@@ -109,10 +106,7 @@ export class ChatComponent implements OnInit, AfterViewChecked, OnDestroy {
     
     console.log('Starting speech recognition...');
     this.isListening = true;
-    this.loading = false; // Don't show the typing indicator for listening
-    
-    // Update placeholder to show we're listening
-    this.inputPlaceholder = 'Listening...';
+    this.loading = true;
     
     // Trigger the server-side speech recognition
     fetch('http://localhost:5006/stt', {
@@ -126,48 +120,43 @@ export class ChatComponent implements OnInit, AfterViewChecked, OnDestroy {
         return response.json();
       })
       .then(data => {
-        // Set the transcribed text in the input field
         if (data && data.text) {
           if (data.text.trim()) {
             this.userMessage = data.text;
-            this.inputPlaceholder = 'Type a message…';
             
-            // Don't auto-send, let the user review and send manually
+            // Auto-send if confidence is high
+            if (data.confidence && data.confidence > 0.8) {
+              this.sendMessage();
+            }
           } else {
             console.warn('Received empty transcription from STT service');
             this.userMessage = ''; // Clear any previous message
-            this.inputPlaceholder = 'Could not understand. Please try again.';
-            setTimeout(() => this.inputPlaceholder = 'Type a message…', 3000);
           }
         } else if (data && data.error) {
           console.error('STT service error:', data.error);
-          this.inputPlaceholder = 'Error understanding speech. Please try again.';
-          setTimeout(() => this.inputPlaceholder = 'Type a message…', 3000);
+          alert('Could not understand audio. Please try again.');
         }
       })
       .catch(error => {
         console.error('Error processing speech:', error);
-        
-        // Only show error message if the error isn't due to user cancellation
         if (error.name !== 'AbortError') {
-          this.inputPlaceholder = 'Could not reach the speech service. Please try again.';
-          setTimeout(() => this.inputPlaceholder = 'Type a message…', 3000);
-        } else {
-          this.inputPlaceholder = 'Type a message…';
+          alert('Error processing speech. Please try again.');
         }
       })
       .finally(() => {
         this.isListening = false;
+        this.loading = false;
       });
   }
-  
+
   stopRecording(): void {
     // Since recording is handled server-side, just update UI state
-    console.log('Stop recording called');
-    // We don't reset isListening here as the fetch request is still in progress
-    // The isListening flag will be reset in the finally block of the fetch request
+    if (this.isListening) {
+      console.log('Stopping speech recognition indicator');
+      this.isListening = false;
+    }
   }
-  
+
   ngOnDestroy(): void {
     // No cleanup needed since we're not using browser's audio API
   }

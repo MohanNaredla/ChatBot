@@ -9,3 +9,11 @@ cryptography==41.0.7
 
 dotenv
 python_dotenv
+# Speech recognition dependencies
+pyttsx3>=2.90
+pyaudio>=0.2.13
+SpeechRecognition>=3.10.0
+fastapi>=0.96.0
+uvicorn>=0.22.0
+pydantic>=1.10.8
+python-multipart>=0.0.6

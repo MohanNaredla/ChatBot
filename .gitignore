@@ -30,3 +30,12 @@ __pycache__/
 json/
 questions.json
 conversation_history/
+
+# docker
+docker-compose.yml
+Dockerfile
+
+# bat and sh files
+*.bat
+*.sh
+*.ps1
